@@ -1,0 +1,59 @@
+.category {
+  background-color: #cfe2f3ff!important;
+}
+
+.question {
+  background-color: #b6d7a8ff!important;
+}
+
+.advice {
+  background-color: #ea9999ff!important;
+}
+
+.action {
+  background-color: #ffe599ff!important;
+}
+
+.subcat {
+  margin:5px;
+  color:#343a40!important;
+}
+
+.external {
+  background-color: tomato!important;
+}
+
+#motm {
+  text-align: center;
+}
+
+#tooltip {
+  position: static;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: var(--box-shadow-vars);
+}
+
+
+#tooltip:empty  {
+  padding: 0px;
+}
+
+#what {
+  background-color: transparent!important;
+  border-radius: 0px;
+  border: 0px;
+  -webkit-appearance: none;
+  overflow-y: auto;
+  width: 100%;
+  resize: none;
+  outline: none;
+  padding: 0px;
+  font-size: 20px;
+  color: #212529;
+}
+
+#what:focus {
+  outline: none!important;
+}

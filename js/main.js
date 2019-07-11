@@ -129,14 +129,14 @@ function loadpage(name) {
                 document.body.innerHTML = Mustache.render(bodyexamplehtml, data)
                 document.body.id = data["type"]
                 document.title = data["title"]
-                load()
+                load(name)
             })
         }
     })
 }
 
 // Load is a whole bunch of miscellaneous stuff related to loading the page.
-function load() {
+function load(name) {
     hist = getCookie("hist")
     if (hist != "") {
         if (location.pathname + location.search == "/?p=" || (location.search == "" && location.pathname != "/404.html") || location.search == "?p=index") {
@@ -154,6 +154,7 @@ function load() {
     }
     removeconsecutiveduplicates()
     renderbreadcrumb()
+    bottomofpagelink(name)
 }
 
 // This just returns data for a get parameter named when calling the function
@@ -192,13 +193,27 @@ function loadadviser() {
         jobject = resp["goto_adviser"][x]
         document.getElementById("why").innerHTML = jobject["why"]
         document.getElementById("what").innerHTML = jobject["what"]
-        text = document.getElementById("link").getElementsByTagName("input")[0]
-        hist = getCookie("hist")
-
-        linkstr = location.origin + location.pathname + "/?g=" + x + "&h=" + hist
-        text.setAttribute("value", linkstr)
-        link = document.getElementById("link").getElementsByTagName("a")[0]
+        bottomofpagelinkadviser(x)
     })
+}
+
+
+function bottomofpagelinkadviser(page) {
+    text = document.getElementById("link").getElementsByTagName("input")[0]
+    hist = getCookie("hist")
+
+    linkstr = location.origin + location.pathname + "/?g=" + page + "&h=" + hist
+    text.setAttribute("value", linkstr)
+    link = document.getElementById("link").getElementsByTagName("a")[0]
+}
+
+function bottomofpagelink(page) {
+    text = document.getElementById("link").getElementsByTagName("input")[0]
+    hist = getCookie("hist")
+
+    linkstr = location.origin + location.pathname + "?p=" + page + "&h=" + hist
+    text.setAttribute("value", linkstr)
+    link = document.getElementById("link").getElementsByTagName("a")[0]
 }
 
 function clicktocopy() {

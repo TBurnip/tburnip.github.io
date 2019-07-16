@@ -144,8 +144,17 @@ function load(name) {
         hist = gethist
     }
     removeconsecutiveduplicates()
+    removebrowserbackeventduplicates()
     renderbreadcrumb()
     bottomofpagelink(name,false)
+}
+
+function removebrowserbackeventduplicates() {
+    hista = hist.split(",")
+    if (hista[hista.length - 3] == pagename) {
+        console.log("browser back")
+        hist = hista.slice(0,-2).join();
+    }
 }
 
 // This just returns data for a get parameter named when calling the function

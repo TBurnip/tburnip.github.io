@@ -11,7 +11,7 @@
                 "link": "courses",
                 "linkexternal": false
             }, {
-                "name": "Degree Programme",
+                "name": "Degree Programme and Course of Study",
                 "link": "degree",
                 "linkexternal": false
             }, {
@@ -301,41 +301,21 @@
             "title": "How Many Credits to Take",
             "type": "advice",
             "descp": "",
-            "info": "<p>Students should enroll in 120 credits (usually 60 per semester) worth of courses before the start of teaching time. If you have any further questions about taking credits, speak to a Student Support Officer.</p>"
+            "info": "Students should enroll in 120 credits (usually 60 per semester) worth of courses before the start of teaching time. If you have any further questions about taking credits, speak to a Student Support Officer."
         },
         "degree": {
             "filename": "degree",
-            "title": "Degree Programme",
+            "title": "Degree Programme and Course of Study",
             "type": "category",
             "descp": "",
-            "info": "",
+            "info": "This covers things such as switching between different degree plans - i.e. changing from MSci to BSc (Hons) - and joint/combined honours. There can be a lot of complexity in this area so it it is generally best to discuss it with your adviser.<br><br>When contacting your adviser of studies try and include as much information  as possible about your situation and the steps you have already taken, this will give your adviser something to go on and hopefully save you time.",
             "subcats": [{
-                "name": "Course of Study",
-                "info": "Switch between masters, honours and designated degree",
-                "link": "goto_adviser",
-                "linkexternal": false
-            }, {
-                "name": "Combined and Joint Honours",
-                "link": "goto_adviser",
-                "linkexternal": false
-            }, {
-                "name": "Switch Major",
-                "link": "within_college",
-                "linkexternal": false
-            }]
-        },
-        "within_college": {
-            "filename": "within_college",
-            "title": "Is the subject you wish to switch to in the College of Science and Engineering?",
-            "type": "question",
-            "descp": "",
-            "subcats": [{
-                "name": "Yes",
-                "link": "goto_adviser",
-                "linkexternal": false
-            }, {
-                "name": "No",
+                "name": "Switch major outside of the College of Science and Engineering",
                 "link": "transfer_outside_college",
+                "linkexternal": false
+            },{
+                "name": "Who is my adviser of studies?",
+                "link": "adviser_info",
                 "linkexternal": false
             }]
         },

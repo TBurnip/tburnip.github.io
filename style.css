@@ -1,4 +1,4 @@
-.category {
+/* .category {
   background-color: #cfe2f3ff!important;
 }
 
@@ -16,7 +16,7 @@
 
 .external {
   background-color: tomato!important;
-}
+} */
 
 #motm {
   text-align: center;
@@ -63,9 +63,11 @@ nav.navbar-expand-sm {
   width: 33.3%;
   margin:5px;
   color:#343a40!important;
+  background-color: #cfe2f3ff!important;
+  box-shadow: 10px, 10px;
 }
 
-.row {
+.d-flex flex-wrap {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -89,10 +91,11 @@ nav.navbar-expand-sm {
 
 @media only screen and (max-width: 600px) {
   .subcat {
-    width: 50%;
+    float: left;
+    width: 75%;
   }
-  
-  .row {
+
+  .d-flex flex-wrap {
     display: flex;
     flex-direction: column;
   }

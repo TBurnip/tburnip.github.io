@@ -23,18 +23,6 @@
   margin-bottom: 10px;
 }
 
-#tooltip {
-  position: static;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: var(--box-shadow-vars);
-}
-
-#tooltip:empty  {
-  padding: 0px;
-}
-
 #what {
   background-color: transparent!important;
   border-radius: 0px;

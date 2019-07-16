@@ -2,27 +2,12 @@ var hist
 
 // As the name suggest it sets a cookie. This is a modified version of a bit of code of the internet
 function setCookie(cname, cvalue) {
-    var d = new Date();
-    d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    sessionStorage.setItem(cname,cvalue)
 }
 
 // same as above but for getting a cookie
 function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
+    return sessionStorage.getItem(cname)
 }
 
 // This function takes advantage of a variable and cookie called hist. Hist stands for history and is an array of all the previous pages a user has been to. This function simply steps back up the array and deletes the page you are on while doing so.
@@ -39,8 +24,14 @@ function goback() {
 function renderbreadcrumb() {
     bread = document.getElementById("breadcrumb")
     bread.innerHTML = ""
+    count = 0
     hist.split(",").forEach(crumb => {
-        bread.innerHTML = bread.innerHTML + "<li class=\"breadcrumb-item\"><a href=\"/?p=" + crumb + "\">" + crumb + "</a></li>"
+        bread.innerHTML = bread.innerHTML + "<li class=\"breadcrumb-item\"><a onclick=\"clickhandler('/?p=" + 
+        crumb + "',this)\" href=\"#\" data-clickid=\"breadcrumb_"+ 
+        count +"\">" + 
+        crumb + "</a></li>"
+        count ++;
+
     });
 }
 
@@ -93,17 +84,21 @@ function jsonloaded(resp) {
     pagedata = data["pages"][pagename]
     if (pagedata != undefined) {
         if (!(pagedata["subcats"] == null || pagedata["subcats"] == undefined)) {
+            count = 0;
             pagedata["subcats"].forEach(subcat => {
                 if (subcat["linkexternal"] == false) {
                     if (data["pages"][subcat["link"]] != undefined) {
-                        subcat["type"] = data["pages"][subcat["link"]]["type"]
-                        subcat["descp"] = data["pages"][subcat["link"]]["descp"]
-                        subcat["link"] = "/?p=" + subcat["link"]
+                        subcat["type"] = data["pages"][subcat["link"]]["type"];
+                        subcat["descp"] = data["pages"][subcat["link"]]["descp"];
+                        subcat["link"] = "/?p=" + subcat["link"];
+                        subcat["clickid"] = count;
                     }
                 } else {
                     subcat["type"] = "external\" target=\"_blank\" class=\"";
                     subcat["descp"] = "This is an external link. Use caution when proceeding";
+                    subcat["clickid"] = count;
                 }
+                count ++;
             })
         }
 
@@ -145,7 +140,7 @@ function load(name) {
     }
     hist = getCookie("hist")
     gethist = findGetParameter("h")
-    if (gethist != null) {
+    if (gethist != undefined) {
         hist = gethist
     }
     removeconsecutiveduplicates()
@@ -204,4 +199,17 @@ function clicktocopy(element) {
 
     /* Copy the text inside the text field */
     document.execCommand("copy");
+}
+
+
+function clickhandler(url,t) {
+    clickid = t.getAttribute("data-clickid")
+    console.log(url,clickid,pagename)
+    clickdata = {"type":"click","currentpage":pagename,"clickname":clickid};
+    console.log(JSON.stringify(clickdata))
+    if (clickid.search(/subcat\_.*/) == 0) {
+        location = url
+    } else if (clickid.search(/breadcrumb\_.*/) == 0) {
+        console.log("Lets go breadcrumbing")
+    }
 }

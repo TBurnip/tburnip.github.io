@@ -65,75 +65,71 @@ function removeconsecutiveduplicates() {
     setCookie("hist", hist)
 }
 
-
 // This is used to load data into the page. This only a switch which allows for the use of localhost to represent index.
 function loaddata() {
     local = findGetParameter("p")
     if (local != null) {
-        loadpage(local)
+        pagename = local
+        loadpage()
     } else {
-        loadpage("index")
+        pagename = "index"
+        loadpage()
     }
 }
 
 // Loads the page with the given name. This uses the data from the json to load the page and uses a file called bodyexample.html as a template.
-function loadpage(name) {
-    console.log("Geting Data for: " + name)
-    getrequest("/js/data.json", {}, function (r) {
-        resp = JSON.parse(r.responseText);
-        console.log(resp["Page"])
-        found = false
-        resp["Page"].forEach(page => {
-            if (page["filename"] == name) {
-                data = page
-                found = true
-            }
-        });
-        if (found == false) {
-            location = "/404.html"
-            return
-        }
-        if (!(data["subcats"] == null || data["subcats"] == undefined)) {
-            data["subcats"].forEach(subcat => {
-                templink = subcat["link"]
-                re = /^\/\?p=(.*)|^(https?:\/\/.*)/;
-                result = re.exec(templink);
-                console.log("LOOK HERE" + result);
-                if (!(result == null || result[1] == undefined)) {
-                    templink = result[1]
-                    resp["Page"].forEach(page => {
-                        if (page["filename"] == templink) {
-                            if (data["type"] != "question") {
-                                subcat["type"] = page["type"];
-                            } else {
-                                subcat["type"] = "anwser";
-                            }
-                            subcat["descp"] = page["descp"];
-                        }
-                    });
-                } else if (!(result == null || result[2] == undefined)) {
+var data
+var pagename
+var pagedata
+
+function loadpage() {
+    console.log("Geting Data for: " + pagename);
+    $.get("/js/data.json",jsonloaded);
+}
+
+function jsonloaded(resp) {
+    data = resp
+    console.log(data)
+    pagedata = data["pages"][pagename]
+    if (pagedata != undefined) {
+        if (!(pagedata["subcats"] == null || pagedata["subcats"] == undefined)) {
+            pagedata["subcats"].forEach(subcat => {
+                if (subcat["linkexternal"] == false) {
+                    if (data["pages"][subcat["link"]] != undefined) {
+                        subcat["type"] = data["pages"][subcat["link"]]["type"]
+                        subcat["descp"] = data["pages"][subcat["link"]]["descp"]
+                        subcat["link"] = "/?p=" + subcat["link"]
+                    }
+                } else {
                     subcat["type"] = "external\" target=\"_blank\" class=\"";
                     subcat["descp"] = "This is an external link. Use caution when proceeding";
                 }
-            });
-        }
-        var d = new Date();
-        var n = d.getMonth();
-        data["motm"] = resp["motm"][n]
-
-        console.log("The Data is: " + data)
-        if (data != null) {
-            getrequest("/bodyexample.html", {}, function (r) {
-                // console.log(data)
-                bodyexamplehtml = r.responseText
-                document.body.innerHTML = Mustache.render(bodyexamplehtml, data)
-                document.body.id = data["type"]
-                document.title = data["title"]
-                load(name)
             })
         }
-    })
+
+        var d = new Date();
+        var n = d.getMonth();
+        pagedata["motm"] = data["motm"][n]
+        if (data != null) {
+            $.get("/bodyexample.html",bodyexampleloaded);
+        }
+    } else {
+        console.log(pagename)
+        location = "/404.html"
+        return
+    }
 }
+
+function bodyexampleloaded(r) {
+    console.log(pagedata)
+    console.log(r)
+    bodyexamplehtml = r
+    document.body.innerHTML = Mustache.render(bodyexamplehtml, pagedata)
+    document.body.id = pagedata["type"]
+    document.title = pagedata["title"]
+    load(pagename)
+}
+
 
 // Load is a whole bunch of miscellaneous stuff related to loading the page.
 function load(name) {
@@ -154,7 +150,7 @@ function load(name) {
     }
     removeconsecutiveduplicates()
     renderbreadcrumb()
-    bottomofpagelink(name)
+    bottomofpagelink(name,false)
 }
 
 // This just returns data for a get parameter named when calling the function
@@ -171,67 +167,37 @@ function findGetParameter(parameterName) {
     return result;
 }
 
-// When a subcat is hovered over this is used to show the tool tip
-function onhover(l) {
-    if (l != "") {
-        document.getElementById("tooltip").innerHTML = "Tooltip: " + l
-    }
-}
-
-// When you move away from hovering over a subcat this make the tooltip diappear
-function onnothover() {
-    document.getElementById("tooltip").innerHTML = ""
-}
-
-
 function loadadviser() {
     load()
     x = findGetParameter("g")
-    getrequest("/js/data.json", {}, function (r) {
-        resp = JSON.parse(r.responseText);
+    $.get("/js/data.json",function (r) {
+        resp = r
         console.log(resp["goto_adviser"])
         jobject = resp["goto_adviser"][x]
         document.getElementById("why").innerHTML = jobject["why"]
         document.getElementById("what").innerHTML = jobject["what"]
-        bottomofpagelinkadviser(x)
-    })
+        bottomofpagelink(x,true)
+    });
 }
 
-
-function bottomofpagelinkadviser(page) {
+function bottomofpagelink(page,ad) {
     text = document.getElementById("link").getElementsByTagName("input")[0]
     hist = getCookie("hist")
 
-    linkstr = location.origin + location.pathname + "/?g=" + page + "&h=" + hist
+    if (ad) {
+        linkstr = location.origin + location.pathname + "?g=" + page + "&h=" + hist
+    }else {
+        linkstr = location.origin + location.pathname + "?p=" + page + "&h=" + hist
+    }
+    
     text.setAttribute("value", linkstr)
     link = document.getElementById("link").getElementsByTagName("a")[0]
 }
 
-function bottomofpagelink(page) {
-    text = document.getElementById("link").getElementsByTagName("input")[0]
-    hist = getCookie("hist")
-
-    linkstr = location.origin + location.pathname + "?p=" + page + "&h=" + hist
-    text.setAttribute("value", linkstr)
-    link = document.getElementById("link").getElementsByTagName("a")[0]
-}
-
-function clicktocopy() {
+function clicktocopy(element) {
     console.log("copying")
     /* Get the text field */
-    link = document.getElementById("link").getElementsByTagName("input")[0]
-
-    /* Select the text field */
-    link.select();
-
-    /* Copy the text inside the text field */
-    document.execCommand("copy");
-}
-
-function copywhat(t) {
-    console.log("copying")
-    /* Get the text field */
-    link = document.getElementById("what")
+    link = element
 
     /* Select the text field */
     link.select();

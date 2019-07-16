@@ -14,17 +14,13 @@
   background-color: #ffe599ff!important;
 }
 
-.subcat {
-  margin:5px;
-  color:#343a40!important;
-}
-
 .external {
   background-color: tomato!important;
 }
 
 #motm {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 #tooltip {
@@ -34,7 +30,6 @@
   padding: 10px;
   box-shadow: var(--box-shadow-vars);
 }
-
 
 #tooltip:empty  {
   padding: 0px;
@@ -56,4 +51,54 @@
 
 #what:focus {
   outline: none!important;
+}
+
+#info {
+  font-size: 30px;
+}
+
+.jumbotron {
+  background-color:	#013564;
+  color: aliceblue;
+  position: relative;
+  top: 0px;
+  border-radius: 0px;
+  margin: 0px;
+}
+
+nav.navbar-expand-sm {
+  margin-bottom: 50px;
+}
+
+.subcat {
+  float: left;
+  width: 33.3%;
+  margin:5px;
+  color:#343a40!important;
+}
+
+.row {
+  text-align: center;
+  margin: auto;
+  width: 80%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#logo {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.breadcrumb {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0px;
 }

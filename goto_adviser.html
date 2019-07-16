@@ -8,7 +8,6 @@
     <title>Go to your adviser of studies.</title>
 
     <script src="js/main.js"></script>
-    <script src="js/requests.js"></script>
     <script src="js/moustache.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&amp;display=swap" rel="stylesheet">
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
@@ -65,14 +64,14 @@
             
             
             <textarea name="" id="what" class="form-control" rows="4"></textarea><br>
-            <button class="btn btn-outline-secondary" onclick="copywhat()">Click to copy</button><br><br>
+            <button class="btn btn-outline-secondary" onclick="clicktocopy(document.getElementById('what'))">Click to copy</button><br><br>
 
             <h4 id="link">Here is a link to this page with all the previous pages you have visited detailed: <br>
 
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" value="" style="height: 38px;">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" onclick="clicktocopy(this)">Click to copy</button>
+                        <button class="btn btn-outline-secondary" onclick="clicktocopy(document.getElementById('link').getElementsByTagName('input')[0])">Click to copy</button>
                     </div>
                 </div>
 

@@ -366,7 +366,7 @@
                 "link": "health_good_cause",
                 "linkexternal": false
             }, {
-                "name": "Fitness to Study",
+                "name": "Do you have a prolonged health problem that is affecting your ability to study?",
                 "link": "health_fit_to_study",
                 "linkexternal": false
             }, {
@@ -388,7 +388,7 @@
             "title": "Good Cause",
             "type": "advice",
             "descp": "",
-            "info": "Good Cause <a href=\"/pdf/good_cause_flowchart.pdf\">PDF</a>",
+            "info": "Try and follow through <a href=\"/pdf/good_cause_flowchart.pdf\">this flowchart</a> to find the appropriate course of action. If you're still unsure you should speak to a Student Support Officer.",
             "subcats": []
         },
         "health_fit_to_study": {
@@ -396,24 +396,16 @@
             "title": "Fitness to Study",
             "type": "category",
             "descp": "",
-            "info": "",
+            "info": "\"The Fitness to Study Procedure focuses on student welfare and seeks to support students encountering challenges which affect their ability to study and engage in wider University life.\" - Senate Office",
             "subcats": [{
                 "name": "I would like to be Considered for a fitness to study case",
                 "link": "goto_adviser",
                 "linkexternal": false
             }, {
-                "name": "What is a fiteness to study case?",
-                "link": "fit_to_study_guide",
+                "name": "Senate Office Guidance on Fitness to Study",
+                "link": "/pdf/fitness_to_study.pdf",
                 "linkexternal": false
             }]
-        },
-        "fit_to_study_guide": {
-            "filename": "fit_to_study_guide",
-            "title": "The fitness to Study Guide",
-            "type": "advice",
-            "descp": "",
-            "info": "Here is a pdf?",
-            "subcats": []
         },
         "local_health": {
             "filename": "local_health",

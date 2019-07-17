@@ -18,8 +18,13 @@
   background-color: tomato!important;
 } */
 
+body {
+  background-color: transparent!important;
+}
+
 #motm {
   text-align: center;
+  font-size: 40%!important;
   margin-bottom: 10px;
 }
 
@@ -60,6 +65,7 @@ nav.navbar-expand-sm {
 
 .subcat {
   float: left;
+  text-align: center;
   width: 33.3%;
   margin:5px;
   color:#343a40!important;

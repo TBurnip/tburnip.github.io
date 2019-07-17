@@ -89,13 +89,11 @@ function jsonloaded(resp) {
                 if (subcat["linkexternal"] == false) {
                     if (data["pages"][subcat["link"]] != undefined) {
                         subcat["type"] = data["pages"][subcat["link"]]["type"];
-                        subcat["descp"] = data["pages"][subcat["link"]]["descp"];
                         subcat["link"] = "/?p=" + subcat["link"];
                         subcat["clickid"] = count;
                     }
                 } else {
                     subcat["type"] = "external\" target=\"_blank\" class=\"";
-                    subcat["descp"] = "This is an external link. Use caution when proceeding";
                     subcat["clickid"] = count;
                 }
                 count ++;

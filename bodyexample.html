@@ -18,14 +18,14 @@
   </ul>
 </nav>
   
-<ul class="breadcrumb" id="breadcrumb"></ul>
+
 
 <div class="row">
   <div class="col-sm-1"></div>
   <div class="col-sm-10">
     <div class="d-flex flex-wrap">
       {{ #subcats }}
-      <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark {{{ type }}}" data-clickid="subcat_{{ clickid }}" onclick="clickhandler('{{ link }}',this)" href="#"><h2>{{ name }}</h2></a>
+      <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark {{{ type }}}" data-clickid="subcat_{{ clickid }}" onclick="clickhandler('{{ link }}',this,{{ linkexternal }}{{ ^linkexternal }}false{{ /linkexternal }},{{ goto_adviser }}{{ ^goto_adviser }}false{{ /goto_adviser }})" href="#"><h2>{{ name }}</h2></a>
       {{ /subcats }}
     </div>
   </div>
@@ -51,7 +51,7 @@
       <div class="input-group mb-3">
           <input type="text" class="form-control" value="" style="height: 38px;">
           <div class="input-group-append">
-              <button class="btn btn-outline-secondary" onclick="clicktocopy(document.getElementById('link').getElementsByTagName('input')[0])">Click to copy</button>
+              <button class="btn btn-outline-success" onclick="clicktocopy(document.getElementById('link').getElementsByTagName('input')[0])">Click to copy</button>
           </div>
       </div>
     
@@ -60,3 +60,6 @@
   <div class="col-sm-1"></div>
 </div>
 
+<footer class="footer">
+  <span class="text-muted"><ul class="breadcrumb" style="margin-bottom: 0px!important;" id="breadcrumb"></ul></span>
+</footer>

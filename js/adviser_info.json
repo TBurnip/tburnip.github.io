@@ -1,0 +1,38 @@
+{
+    "possible_to_drop_or_swap": {
+        "who":"[sso or adviser]",
+        "why":"",
+        "what":"",
+        "notesforadviser":""
+    },
+    "add_drop_period": {
+        "who":"[sso or adviser]",
+        "why":"",
+        "what":"",
+        "notesforadviser":""
+    },
+    "degree": {
+        "who":"[sso or adviser]",
+        "why": "this is why",
+        "what": "this is what",
+        "notesforadviser":""
+    },
+    "within_college": {
+        "who":"[sso or adviser]",
+        "why":"",
+        "what":"",
+        "notesforadviser":""
+    },
+    "health_fit_to_study": {
+        "who":"[sso or adviser]",
+        "why":"",
+        "what":"",
+        "notesforadviser":""
+    },
+    "exams": {
+        "who":"[sso or adviser]",
+        "why":"",
+        "what":"",
+        "notesforadviser":""
+    }
+}

@@ -1,7 +1,167 @@
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>body { margin: 0px; } .embed-container { position: relative; padding-bottom: 100%; height: 0; overflow: hidden; max-width: 100%; min-height: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>General</title>
+
+    <script src="js/main.js"></script>
+    <script src="js/moustache.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&amp;display=swap" rel="stylesheet">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body>
-  <div class='embed-container'><iframe src='index.html' style='border:0;' width="600" height="400"></iframe></div>
+
+  <body id="category">
+    <div class="jumbotron">
+      <div class="col-sm-10">
+        <h1 class="display-3">General</h1>
+        <p id="info"></p>
+      </div>
+      <img id="logo" src="img/logo.svg" alt="logo" width="190">
+    </div>
+
+    <nav class="navbar-expand-sm bg-dark navbar-dark">
+      <!-- class="navbar navbar-expand-sm bg-light navbar-light">-->
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" onclick="goback()">Back</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#glossery" data-toggle="collapse">Glossary</u></a>
+        </li>
+      </ul>
+      <div id="glossery" class="collapse">
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+            <h3>Course</h3>
+            Course is used to mean many things including in this tool. In general we use course to mean Module, however
+            we also use it in course of study which would actually be Plan.
+            <br><br>
+            <h3>Module</h3>
+            A module is an individual section of subject like CS1CT for Computing or EE1X for Engineering.
+            <br><br>
+            <h3>Plan</h3>
+            Plan is the Degree you would come out with e.g. Computing Science, Software Engineering or Electrical
+            Engineering
+            <br><br>
+            <h3>Programme</h3>
+            Programme is the type of degree e.g. MSci, BSc(Hons) or BEng
+            <br><br>
+            <h3>Subject</h3>
+            Subject can be found to be loosely analogous to a school. E.g. The Maths subject is taught by the School of
+            Mathematics & Statistics and Physics is taught by the School of Physics & Astronomy
+            <br><br>
+            <h3>Erasmus</h3>
+            Erasmus is the programme by which students can study abroad in the EU.
+            <br>
+          </div>
+          <div class="col-sm-2"> </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="d-flex flex-wrap">
+          <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark category" data-clickid="subcat_0"
+            onclick="clickhandler('/?p=courses',this,false,false)" href="#">
+            <h2>Courses, Timetabling &amp; Enrolment</h2>
+          </a>
+          <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark category" data-clickid="subcat_1"
+            onclick="clickhandler('/?p=degree',this,false,false)" href="#">
+            <h2>Degree Programme and Course of Study</h2>
+          </a>
+          <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark advice" data-clickid="subcat_2"
+            onclick="clickhandler('/?p=careers',this,false,false)" href="#">
+            <h2>Careers and Internships</h2>
+          </a>
+          <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark category" data-clickid="subcat_3"
+            onclick="clickhandler('/?p=health',this,false,false)" href="#">
+            <h2>Health and Absence</h2>
+          </a>
+          <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark action" data-clickid="subcat_4"
+            onclick="clickhandler('/?p=study_abroad',this,false,false)" href="#">
+            <h2>Erasmus/ Study Abroad</h2>
+          </a>
+          <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark category" data-clickid="subcat_5"
+            onclick="clickhandler('/?p=finance',this,false,false)" href="#">
+            <h2>Finance</h2>
+          </a>
+          <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark category" data-clickid="subcat_6"
+            onclick="clickhandler('/?p=exams',this,false,false)" href="#">
+            <h2>Exams, Assessments, Resits &amp; Progression</h2>
+          </a>
+          <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark external" data-clickid="subcat_7"
+            onclick="clickhandler('https://docs.google.com/document/d/1W5yhAEmaeQA2H5jwm0X7CFHLWm9eXROyf_OKeujYQTQ/edit?usp=sharing',this,true,false)"
+            href="#">
+            <h2>Other/FAQ</h2>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div id="motm">
+          <h5 id="motm_text">Have fun it's the summer holiday, or revise</h5>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <h4 id="link">Here is a link to this page with all the previous pages you have visited detailed: <br>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" value="http://localhost:8080/?p=index&amp;h=index"
+              style="height: 38px;">
+            <div class="input-group-append">
+              <button class="btn btn-outline-success"
+                onclick="clicktocopy(document.getElementById('link').getElementsByTagName('input')[0])">Click to
+                copy</button>
+            </div>
+          </div>
+
+        </h4>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+
+    <footer class="footer">
+      <span class="text-muted">
+        <ul class="breadcrumb" style="margin-bottom: 0px!important;" id="breadcrumb">
+          <li class="breadcrumb-item"><a onclick="clickhandler('/?p=index',this)" href="#"
+              data-clickid="breadcrumb_0">index</a></li>
+        </ul>
+      </span>
+    </footer>
   </body>
+
+</html>

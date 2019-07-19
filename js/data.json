@@ -561,14 +561,14 @@
     },
     "goto_adviser": {
         "possible_to_drop_or_swap": {
-            "who":"SSO",
-            "why":"As the only way to solve this timetable clash is to drop one of the courses in question, you should consult with the SSO to ensure you drop the right course and that it won't negatively affect your studies - for example, to make sure you don’t inadvertently drop science credits meaning that you won’t be able to progress to the next year.",
+            "who":"adviser",
+            "why":"As the only way to solve this timetable clash is to drop one of the courses in question, you should consult with your adviser to ensure you drop the right course and that it won't negatively affect your studies - for example, to make sure you don’t inadvertently drop science credits meaning that you won’t be able to progress to the next year.",
             "what":"I have a timetable clash between [subject a] and [subject b]. I have already looked and it doesn't appear to be able to be solved by changing a lab, tutorial or seminar. Because of this I am going to drop one of the subjects and I need help choosing which  one to drop as well as choosing a subject to pick up.",
             "notesforadviser":""
         },
         "add_drop_period": {
-            "who":"SSO",
-            "why":"The add/drop period exists to give students time to try out courses and still be able to change without falling too far behind, therefore changing courses outside the add/drop period could result in a lot of extra work for you - especially if you have missed assessment for the course you wish to change to. Changing courses is still possible however you should certainly discuss it with the SSO to ensure that you make the best decision for you.",
+            "who":"adviser",
+            "why":"The add/drop period exists to give students time to try out courses and still be able to change without falling too far behind, therefore changing courses outside the add/drop period could result in a lot of extra work for you - especially if you have missed assessment for the course you wish to change to. Changing courses is still possible however you should certainly discuss it with your adviser to ensure that you make the best decision for you.",
             "what":"I'm looking to drop [subject] and it is outside the add drop period. Can I discuss this with you to see if it's a good decision?",
             "notesforadviser":""
         },
@@ -586,14 +586,14 @@
             "notesforadviser":""
         },
         "health_fit_to_study": {
-            "who":"SSO",
+            "who":"adviser",
             "why":"",
             "what":"",
             "notesforadviser":""
         },
         "exams": {
-            "who":"SSO",
-            "why":"The SSO is best placed to discuss what you should do next.",
+            "who":"adviser",
+            "why":"Your adviser is best placed to discuss what you should do next.",
             "what":"I didn't get the results I need to progress. What should I do now?",
             "notesforadviser":""
         }

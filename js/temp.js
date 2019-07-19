@@ -1,9 +1,5 @@
 function main(){
-    var hist;
-
-    //get the search parameter, and it it isn't null then set the pagename to it
     
-
     //args object for passing to the page constructor, set default arguments for datafile and template_name, these only change if the get parameter "g" is non-null
     page_args = Object();
     page_args["datafile"] = "js/page_data.json";
@@ -27,15 +23,24 @@ function main(){
     //set the page name in args to local
     page_args["name"] = local;
 
+    console.log(page_args);
+
     //create new page object of pagename and render
     page =  new Page(page_args);
+    console.log(JSON.stringify(page));
+    console.log(page.data);
     page.render();
 }
 
 class History {
     constructor() {
-        this.hist = new Set(["index"]);
+        this.full_hist = new Array();
+        this.breadcrumb = new Set();
     }
+
+    //get history from session storage
+    static getHistory(){ sessionStorage.getItem("hist"); }
+    storeHistory(){ sessionStorage.setItem(this); }
 }
 
 class Page {
@@ -45,22 +50,23 @@ class Page {
         this.name = args["name"];
         this.datafile = args["datafile"];
         this.template_name = args["template"];
-        this.data = this.getData(this.name);
+        var self = this;
+        console.log("getting data for: " + this.name + " from: " + this.datafile);
+        $.get(this.datafile, function(self, data) { self.data = data[self.name]; });
     }
     
     setUpSubcats() {
+
+        console.log(this.data);
         //check whether subcats exists
-        subcats = this.data["subcats"];
-        if (subcats) {
+        if (this.data["subcats"]) {
             var clickID = 0;
             //iterate through all the subcats
+            subcats = this.data["subcats"];
             subcats.forEach(subcat => {
                 target_page = new Page(subcat["link"]);
-                if (!(target_page || subcat["linkexternal"])) {
-                    subcat["type"] = target_page["type"]; //set type of subcat (POSSIBLY GETTING REMOVED)
-                    subcat["link"] = "/p=" + subcat["link"]; //append proper string formatting to link
-                } else {
-                    subcat["type"] = "external\" class=\"";
+                if (target_page.data) {
+                    subcat["link"] = "/p=" + subcat["link"]; //prepend proper string formatting to link
                 }
                 //set clickID
                 subcat["clickID"] = clickID++;
@@ -68,33 +74,29 @@ class Page {
         }
     }
 
-    getData(name) {
-        console.log("Geting Data for: " + name);
-        //gets the data for the page of a given name using a HTTP request for data.json
-        $.get(this.datafile, function(data) { return data[this.name]; });
-    }
-
-    getMotm() {
-        $.get("/js/motm.json", function(data) { 
+    setMotm() {
+        var self = this;
+        $.get("js/motm.json", function(data) { 
             var d = new Date();
-            return data[d.getMonth()];            
+            self.data["motm"] = data[d.getMonth()];            
         });
     }
 
     render() {
-        //if the data for the page is null or undefined then redirect to 404 and return
-        if (!this.data) {
-            location = "/404.html";
-            return;
-        }
 
-        this.setUpSubcats();
-        this.data["motm"] = this.getMotm();
+        //if the data for the page is null or undefined then redirect to 404 and return
+        if (this.data) {
+            this.setUpSubcats();
+            this.setMotm();
+            document.title = data["title"];
+        } else {
+            console.log("yoooo");
+            this.template_name = "404.html";
+            document.title = "(404) Page Not Found";
+        }
 
         $.get(this.template_name, function(template) {
             document.body.innerHTML = Mustache.render(template, this.data);
-            document.body.id = data["type"]; /* POSSIBLY CAN GET RID OF THIS SINCE IT ISN'T DOING ANYTHING IN THE CSS */
-            document.title = data["title"];
         })
 
     }

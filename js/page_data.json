@@ -46,7 +46,7 @@
             "link": "enrol_guide"
         }, {
             "name": "Swap/Drop Course",
-            "link": "swap_drop_courses"
+            "link": "add_swap"
         }, {
             "name": "Advice on choice of Course and Electives",
             "link": "course_choice"
@@ -155,30 +155,11 @@
         "info": "New students can go to  the College of Science and Engineering helpdesk (located on Boyd Orr Level 3) for help with enrolling.",
         "subcats": []
     },
-    "swap_drop_courses": {
-        "filename": "swap_drop_courses",
-        "title": "Swap and Drop Courses",
-        "info": "Do you know what course you would like to take?",
-        "subcats": [{
-            "name": "Yes",
-            "link": "add_drop_period"
-        }, {
-            "name": "No",
-            "link": "course_choice"
-        }]
-    },
-    "add_drop_period": {
-        "filename": "add_drop_period",
-        "title": "Add/Drop Period",
-        "info": "<b>Before swapping courses make sure to consult your adviser about the choice of course.</b><br />Dates  for the add/drop period can be found <a href=\"https://www.gla.ac.uk/myglasgow/registry/enrolment/#/makingchanges\">here.</a> <br><br> (The add/drop period is the first to weeks of teaching in the year. It finishes on the friday of the second week of teaching. It exists so that students aren't tied down to their course choices before the start of term and gives them the fexibility to change them.)",
-        "subcats": [{
-            "name": "Inside Add/Drop",
-            "link": "compsci_teaching_office"
-        }, {
-            "name": "Outside Add/Drop",
-            "link": "outside_add_drop",
-            "goto_adviser": true
-        }]
+    "add_swap": {
+        "filename": "add_swap",
+        "title": "Add/Swap",
+        "info": "Considering adding or swaping a course.<br> Before continuing consider the following<br><div id=\"accordion\"><div class=\"\"><div class=\"\"><a class=\"collapsed\" data-toggle=\"collapse\" href=\"#c1\">What course are you considering?</a></div><div id=\"c1\" class=\"collapse\" data-parent=\"#accordion\"><div class=\"\">You need to know what course you are considering and whether it is sutible for you.<br> If you don't know what course to pick look at the course catalogue to help make a decision.<br> When you know what course to pick email your adviser of studies to find out if it is a sutible choice.</div></div></div><div class=\"\"><div class=\"\"><a class=\"collapsed\" data-toggle=\"collapse\" href=\"#c2\">Are you adding or swapping?</a></div><div id=\"c2\" class=\"collapse\" data-parent=\"#accordion\"><div class=\"\">If you are adding a course it is usually much simpler so long as it doesn't conflict with another course.<br> If it doesn't conflict then you can most likly do it on MyCampus. If it does conflict then read \"Who will change your courses\"</div></div></div><div class=\"\"><div class=\"\"><a class=\"collapsed\" data-toggle=\"collapse\" href=\"#c3\">Are you in the Add/Drop period?</a></div><div id=\"c3\" class=\"collapse\" data-parent=\"#accordion\"><div class=\"\">The add/drop period exists to give students time to try out courses and still be able to change without falling too far behind, therefore changing courses outside the add/drop period could result in a lot of extra work for you - especially if you have missed assessment for the course you wish to change to.<br>Changing courses is still possible however you should certainly discuss it with your adviser to ensure that you make the best decision for you.</div></div></div><div class=\"\"><div class=\"\"><a class=\"collapsed\" data-toggle=\"collapse\" href=\"#c4\">Who will Change your courses You or the Collage Office?</a></div><div id=\"c4\" class=\"collapse\" data-parent=\"#accordion\"><div class=\"\">Though you can change courses yourself in almost all situations you should goto the SSO first.<br> The SSO can then tell you if they can solve the problem or if you need to go to the collage office.<br>However going to the SSO is only nessisary when you are going to drop a course (this includes droping a course to pick another course up and any time where you will drop a course), this is beacuse they can add a course before droping one which means you will never get stuck without a course.</div></div></div><div class=\"\"><div class=\"\"><a class=\"collapsed\" data-toggle=\"collapse\" href=\"#c5\">Getting advice on your proposed changes, are you confident?</a></div><div id=\"c5\" class=\"collapse\" data-parent=\"#accordion\"><div class=\"\">Any time you are considering changing courses it is always recommended you discuss this with your adviser as they really are best placed to anwser questions and help you decide what is right for you.</div></div></div></div>",
+        "subcats": []
     },
     "course_choice": {
         "filename": "course_choice",
@@ -191,8 +172,8 @@
             "name": "Advice on Maths Courses",
             "link": "maths"
         }, {
-            "name": "General Advice on Course Choices",
-            "link": "what_course"
+            "name": "What course should I pick",
+            "link": "add_swap"
         }, {
             "name": "Enquires about number of credits",
             "link": "credit_enquiries"
@@ -214,15 +195,6 @@
         "filename": "maths",
         "title": "Maths Courses",
         "info": "Look at the <a href=\"https://www.gla.ac.uk/coursecatalogue/\">course catalogue</a> and this <a href=\"https://docs.google.com/document/d/1jp_B6i8Q01axzDfMM56u6DkQ_TT9ZPbBr-aW6zcVzUE/edit\">guide</a>.",
-        "subcats": [{
-            "name": "Swapping with another course?",
-            "link": "add_drop_period"
-        }]
-    },
-    "what_course": {
-        "filename": "what_course",
-        "title": "General Advice on Course Choices",
-        "info": "Look at the course catalogue and find some courses that sound interesting to you, then contact your adviser of studies to discuss whether they would be suitable.",
         "subcats": [{
             "name": "Swapping with another course?",
             "link": "add_drop_period"

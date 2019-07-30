@@ -26,6 +26,9 @@
             "name": "Exams, Assessments, Resits & Progression",
             "link": "exams"
         }, {
+            "name": "Appeals, Misconduct and Complaints",
+            "link": "standing_misconduct_and_appeals"
+        }, {
             "name": "Other/FAQ",
             "link": "https://docs.google.com/document/d/1W5yhAEmaeQA2H5jwm0X7CFHLWm9eXROyf_OKeujYQTQ/edit?usp=sharing",
             "linkexternal": true
@@ -49,7 +52,7 @@
             "link": "course_choice"
         }, {
             "name": "Questions relating to course or project",
-            "link": "indivividual_courses_and_projects" 
+            "link": "indivividual_courses_and_projects"
         }]
     },
     "indivividual_courses_and_projects": {
@@ -61,7 +64,7 @@
             "link": "indivividual_courses_and_projects_enrolled"
         }, {
             "name": "No",
-            "link": "indivividual_courses_and_projects_not_enrolled" 
+            "link": "indivividual_courses_and_projects_not_enrolled"
         }]
     },
     "indivividual_courses_and_projects_enrolled": {
@@ -116,7 +119,6 @@
         "subcats": [{
             "name": "This doesn't solve the problem.",
             "link": "possible_to_drop_or_swap"
-            
         }]
     },
     "possible_to_drop_or_swap": {
@@ -169,10 +171,10 @@
         "filename": "add_drop_period",
         "title": "Add/Drop Period",
         "info": "<b>Before swapping courses make sure to consult your adviser about the choice of course.</b><br />Dates  for the add/drop period can be found <a href=\"https://www.gla.ac.uk/myglasgow/registry/enrolment/#/makingchanges\">here.</a> <br><br> (The add/drop period is the first to weeks of teaching in the year. It finishes on the friday of the second week of teaching. It exists so that students aren't tied down to their course choices before the start of term and gives them the fexibility to change them.)",
-        "subcats": [ {
+        "subcats": [{
             "name": "Inside Add/Drop",
             "link": "compsci_teaching_office"
-        },{
+        }, {
             "name": "Outside Add/Drop",
             "link": "outside_add_drop",
             "goto_adviser": true
@@ -232,10 +234,10 @@
         "info": "Students should enroll in 120 credits (usually 60 per semester) worth of courses before the start of teaching time. If you have any further questions about taking credits, speak to a Student Support Officer."
     },
     "compsci_teaching_office": {
-        "filename":"compsci_teaching_office",
-        "title":"Go to the Computing Science Teaching Office",
-        "info":"You can find the teaching office in F161, 17 Lilybank Gardens",
-        "subcats":[]
+        "filename": "compsci_teaching_office",
+        "title": "Go to the Computing Science Teaching Office",
+        "info": "You can find the teaching office in F161, 17 Lilybank Gardens",
+        "subcats": []
     },
     "adviser_info": {
         "filename": "adviser_info",
@@ -263,7 +265,7 @@
             "name": "Have you been absent or missed an assessment?",
             "link": "health_good_cause"
         }, {
-            "name": "Do you have a prolonged health problem that is affecting your ability to study?",
+            "name": "Do you have prolonged a health problem or a personal issue that is affecting your ability to study?",
             "link": "health_fit_to_study"
         }, {
             "name": "Local Health Sevices",
@@ -285,7 +287,8 @@
     "health_fit_to_study": {
         "filename": "health_fit_to_study",
         "title": "Fitness to Study",
-        "info": "\"The Fitness to Study Procedure focuses on student welfare and seeks to support students encountering challenges which affect their ability to study and engage in wider University life.\" - Senate Office",
+        "type": "category",
+        "info": "Sometimes, there are health or other personal issues in a student's life that prevent them from normal study on a course.  Hence they are losing time for proper preparation for subsequent assessments.  The University aims to support students in such situations, and this is formally known as \"Fitness to Study\" - although issues are not due to health alone.  Fitness to Study is usually first considered locally in the School.",
         "subcats": [{
             "name": "I would like to be Considered for a fitness to study case",
             "link": "consider_for_fit_to_study",

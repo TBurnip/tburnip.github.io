@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+
+    <script src="js/temp.js"></script>
+    <script src="js/moustache.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="col-sm-10">
+            <h1 class="display-3">Where do i go for help?</h1>
+
+        </div>
+        <img id="logo" src="img/logo.svg" alt="logo" width="190">
+    </div>
+
+    <nav class="navbar-expand-sm bg-dark navbar-dark">
+        <!-- class="navbar navbar-expand-sm bg-light navbar-light">-->
+        <!-- Links -->
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link text-success" href="#useful" data-toggle="collapse">Useful Links</u></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div id="bodyeything" class="col-sm-8">
+            <p id="info">{{{ info }}}</p>
+            <p>Below are various different places/people that can provide help and when they may be the appropriate
+                form of help.
+                <ul>
+                    <li>Adviser</li>
+                    <li>Class Guide</li>
+                    <li>S.S.O.</li>
+                    <li>Teaching Office</li>
+                    <li>Moodle</li>
+                    <li>Senior Adviser</li>
+                    <li>Course Coordinator</li>
+                    <li>Class Reps</li>
+                    <li>SRC</li>
+                    <li>Ivanti</li>
+                    <li>University Services</li>
+                    <li>Collage</li>
+                </ul>
+            </p>
+
+
+            <div id="button" class="d-flex flex-wrap">
+                <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark advice" href="/?p=adviser_info">
+                    <h2>guideMe</h2>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            <div id="useful" class="collapse">
+                <h3>UG Course Guide</h3>
+                <h3>PGT Course Guide</h3>
+                <h3>CS Moodle</h3>
+                <h5>
+                    <ul>
+                        <li>Level 1</li>
+                        <li>Level 2</li>
+                        <li>Level 3</li>
+                        <li>Level 4</li>
+                    </ul>
+                </h5>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

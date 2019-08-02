@@ -28,12 +28,26 @@
         "subcats": [{
             "name": "Who is my adviser of studies?",
             "link": "adviser_info"
+        },
+        {
+            "name": "Transfer outside College of Science and Engineering",
+            "link": "transfer_outside_college"
+        }]
+    },
+    "problem_with_plan":{
+        "who":"adviser",
+        "why": "Because problems with plan/course of study can become so complicated it is easier to go to your adviser to solve them.",
+        "what": "I am having a problem with my plan/course of study.[a little explanation about your problem]",
+        "notesforadviser":"",
+        "subcats": [{
+            "name": "Who is my adviser of studies?",
+            "link": "adviser_info"
         }]
     },
     "consider_for_fit_to_study": {
-        "who":"adviser",
-        "why":"",
-        "what":"",
+        "who":"sso",
+        "why":"The Student Support Officer is the first point of contact for Fitness To Study cases, in order to determine the most appropriate action to take.  They can coordinate all necessary communication with you and other parts of the University, including with your Adviser of Studies.  In particular, a specific part of the SSO's role is to keep in touch with students who are experiencing difficulties on a longer term basis, to ensure that they get back on track with their studies.",
+        "what":"If you wish, you can let the SSO know the nature of the issues that have affected your studies.  Alternatively, you can wait until you are speaking to the SSO personally.",
         "notesforadviser":"",
         "subcats": [{
             "name": "Who is my adviser of studies?",

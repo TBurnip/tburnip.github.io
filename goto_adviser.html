@@ -1,42 +1,38 @@
 <div class="row jumbotron">
     <div class="col-sm-10">
-        <h1 class="display-3">Go to {{ dpwho }}<span class="dpwho"></span>.</h1>
-        <h4>You have been advised to go to {{ dpwho }}<span class="dpwho"></span>. Heres why:<br></h4>
+        <h1 class="display-3">Go to {{ dp }}<span class="dpwho"></span>.</h1>
+        <h4>You have been advised to go to {{ dp }}<span class="dpwho"></span>. Heres why:<br></h4>
 
         <blockquote class="blockquote">
             <p id="why">{{ why }}</p>
         </blockquote>
         <br>
 
-        <h4 id="info">When contacting {{ dpwho }}<span class="dpwho"></span> try to include as much information as possible
+        <h4 id="info">When contacting {{ dp }}<span class="dpwho"></span> try to include as much information as possible
             about
             your situation and the steps you have already taken, this will give your adviser something to go on
             and
             hopefully save you time.</h4>
 
         <br>
-        <h4>So what should i say to {{ fdpwho }}<span class="fdpwho"></span>? <small>The paragraph bellow might be useful at
-                describing where you
-                are on the decision tree.</small></h4>
+        <h4>So what should i say to {{ fdp }}<span class="fdpwho"></span>? <small>The paragraph bellow might be useful at describing where you are on the decision tree.</small></h4>
 
 
 
         <textarea name="" id="what" class="form-control" rows="4">{{ what }}</textarea><br>
-        <button class="btn btn-outline-success" onclick="clicktocopy(document.getElementById('what'))">Click to
-            copy</button><br><br>
+        <button class="btn btn-outline-success" onclick="clickToCopy(document.getElementById('what'))">Click to copy</button>
+        
+        <br><br>
 
-        <h4 id="link">Here is a link to this page with all the previous pages you have visited detailed: <br>
+        <h4>Here is a link to this page with all the previous pages you have visited detailed: </h4> <br>
 
             <div class="input-group mb-3">
-                <input type="text" class="form-control" value="" style="height: 38px;">
+                <input type="text" id="link" class="form-control" value="{{ hist_link }}" onclick="this.select();" style="height: 38px;">
                 <div class="input-group-append">
                     <button class="btn btn-outline-success"
-                        onclick="clicktocopy(document.getElementById('link').getElementsByTagName('input')[0])">Click
-                        to copy</button>
+                        onclick="clickToCopy(document.getElementById('link'));">Click to copy</button>
                 </div>
             </div>
-
-        </h4>
 
     </div>
     <img id="logo" src="img/logo.svg" alt="logo" width="190">
@@ -115,4 +111,5 @@
     <span class="text-muted">
         <ul class="breadcrumb" style="margin-bottom: 0px!important;" id="breadcrumb"></ul>
     </span>
-</footer> 
+</footer>
+

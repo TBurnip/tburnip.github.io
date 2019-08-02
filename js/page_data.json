@@ -1,11 +1,10 @@
 {
     "index": {
-        "filename": "index",
         "title": "General",
         "info": "",
         "subcats": [{
-            "name": "Courses, Timetabling & Enrolment",
-            "link": "courses"
+            "name": "Modules, Timetabling & Enrolment",
+            "link": "modules"
         }, {
             "name": "Degree Programme and Course of Study",
             "link": "degree",
@@ -32,11 +31,66 @@
             "name": "Other/FAQ",
             "link": "https://docs.google.com/document/d/1W5yhAEmaeQA2H5jwm0X7CFHLWm9eXROyf_OKeujYQTQ/edit?usp=sharing",
             "linkexternal": true
+        },{
+            "name": "Issues with my study/course",
+            "link": "issues_with_course_study"
+        }
+    ]
+    },
+    "issues_with_course_study": {
+        "filename": "issues_with_course_study",
+        "title": "Issues with my study/course",
+        "info": "Since this is such a board category bellow are some options to help narrow down who you should go to.",
+        "subcats": [{
+            "name": "Is you issue relating to an individual module?",
+            "link": "individual_module_issues"
+        },{
+            "name": "Is your issue relating to your ability to study?",
+            "link": "study_issues"
+        },{
+            "name":"Is the issue with your plan/course of study?",
+            "link":"problem_with_plan",
+            "goto_adviser":true
         }]
     },
-    "courses": {
-        "filename": "courses",
-        "title": "Courses, Timetabling & Enrolment",
+    "individual_module_issues": {
+        "filename": "individual_module_issues",
+        "title": "Issues with an individual module",
+        "info": "Issues with an individual module can be redirected in many ways.",
+        "accordion":[
+            {
+                "unique":"c1",
+                "heading":"Do you have a question about an individual module or to do with an individual module?",
+                "body":"First you should check that modules moodle page,<br> and if that doesn't answer your question then you should email the lecturer."
+            },
+            {
+                "unique":"c2",
+                "heading":"Do you have a problem with the module and/or the way it is being taught?",
+                "body":"First you should go to the class rep and discuss your problem then they will help you bring it to the year head if that is necessary."
+            }
+        ]
+    },   
+    "study_issues": {
+        "filename": "study_issues",
+        "title": "Issues with your study",
+        "info": "If you are having problems with you study",
+        "accordion":[
+            {
+                "unique":"c1",
+                "heading":"Are you are having trouble studying?",
+                "body":"Goto <a href=\"https://www.gla.ac.uk/myglasgow/leads/students/\">LEADs</a>. <br> They have some excellent resources and people to help with your studying."
+            }
+        ],
+        "subcats":[
+            {
+                "name":"Do you have prolonged a health problem or a personal issue that is affecting your ability to study?",
+                "link":"fitness_to_study"
+            }
+        ]
+    },
+    "modules": {
+        "filename": "modules",
+        "title": "Modules, Timetabling & Enrolment",
         "info": "",
         "subcats": [{
             "name": "Timetable",
@@ -45,42 +99,39 @@
             "name": "Guide on How to Enrol (MyCampus)",
             "link": "enrol_guide"
         }, {
-            "name": "Swap/Drop Course",
+            "name": "Swap/Drop module",
             "link": "add_swap"
         }, {
-            "name": "Advice on choice of Course and Electives",
-            "link": "course_choice"
+            "name": "Advice on choice of Modules and Electives",
+            "link": "module_choice"
         }, {
-            "name": "Questions relating to course or project",
-            "link": "indivividual_courses_and_projects"
+            "name": "Questions relating to a module or project",
+            "link": "individual_modules_and_projects"
         }]
     },
-    "indivividual_courses_and_projects": {
-        "filename": "indivividual_courses_and_projects",
-        "title": "Questions relating to individual course or project",
-        "info": "Are you already enrolled in the course?",
+    "individual_modules_and_projects": {
+        "filename": "individual_modules_and_projects",
+        "title": "Questions relating to individual Modules or project",
+        "info": "Are you already enrolled in the Module?",
         "subcats": [{
             "name": "Yes",
-            "link": "indivividual_courses_and_projects_enrolled"
+            "link": "individual_modules_and_projects_enrolled"
         }, {
             "name": "No",
-            "link": "indivividual_courses_and_projects_not_enrolled"
+            "link": "individual_modules_and_projects_not_enrolled"
         }]
     },
-    "indivividual_courses_and_projects_enrolled": {
-        "filename": "indivividual_courses_and_projects_enrolled",
-        "title": "Questions relating to individual course or project and enrolled",
-        "info": "Check the moodle for the course and if that still doesn't answer your question, email the course lecturer",
-        "subcats": []
+    "individual_modules_and_projects_enrolled": {
+        "filename": "individual_modules_and_projects_enrolled",
+        "title": "Questions relating to individual Modules or project and enrolled",
+        "info": "Check the moodle for the module and if that still doesn't answer your question, email the module lecturer"
     },
-    "indivividual_courses_and_projects_not_enrolled": {
-        "filename": "indivividual_courses_and_projects_not_enrolled",
-        "title": "Questions relating to individual course or project and not enrolled",
-        "info": "Check the course catalogue for information on the course. If this still doesn't yield the info you want email you adviser for advice.",
-        "subcats": []
+    "individual_modules_and_projects_not_enrolled": {
+        "filename": "individual_modules_and_projects_not_enrolled",
+        "title": "Questions relating to individual Modules or project and not enrolled",
+        "info": "Check the module catalogue for information on the module. If this still doesn't yield the info you want email you adviser for advice."
     },
     "timetable": {
-        "filename": "timetable",
         "title": "Timetable",
         "info": "",
         "subcats": [{
@@ -92,16 +143,14 @@
         }]
     },
     "timetable_clash": {
-        "filename": "timetable_clash",
         "title": "Timetable Clash",
-        "info": "A timetable clash may occur between courses or class sections within a course.<br><br>If the course you are enrolling in to is a compulsory course try enrolling in to a different class section (e.g. a different seminar group).<br><br>If the course you are enrolling in to is an optional course try enrolling in to a different class section (e.g. a different seminar group), alternatively enrol in to a new course.<br><br>Download a pdf guide: <a href=\"https://www.gla.ac.uk/media/media_350111_en.pdf\" target=\"_blank\">Timetable clash (pdf)</a><br>Watch the how-to video: <a href=\"https://www.gla.ac.uk/myglasgow/registry/registration/videos/headline_284985_en.html\" target=\"_blank\">Enrolment - timetable clash</a>",
+        "info": "A timetable clash may occur between modules or class sections within a module.<br><br>If the module you are enrolling in to is a compulsory module try enrolling in to a different class section (e.g. a different seminar group).<br><br>If the module you are enrolling in to is an optional module try enrolling in to a different class section (e.g. a different seminar group), alternatively enrol in to a new module.<br><br>Download a pdf guide: <a href=\"https://www.gla.ac.uk/media/media_350111_en.pdf\" target=\"_blank\">Timetable clash (pdf)</a><br>Watch the how-to video: <a href=\"https://www.gla.ac.uk/myglasgow/registry/registration/videos/headline_284985_en.html\" target=\"_blank\">Enrolment - timetable clash</a>",
         "subcats": [{
             "name": "This doesn't solve the problem.",
             "link": "registry_doesnt_fix_clash"
         }]
     },
     "registry_doesnt_fix_clash": {
-        "filename": "registry_doesnt_fix_clash",
         "title": "Move a lab, tutorial or seminar",
         "info": "Can the timetable clash be solved by moving a lab, tutorial or seminar?",
         "subcats": [{
@@ -113,7 +162,6 @@
         }]
     },
     "lab_swaps": {
-        "filename": "lab_swaps",
         "title": "Move a lab, tutorial or seminar",
         "info": "Go to the relevant teaching office and ask about moving the lab, tutorial or seminar.",
         "subcats": [{
@@ -123,25 +171,23 @@
     },
     "possible_to_drop_or_swap": {
         "filename": "possible_to_drop_or_swap",
-        "title": "Can you drop one of the courses?",
-        "info": "Is it possible to solve the problem by dropping one of the courses?",
+        "title": "Can you drop one of the modules?",
+        "info": "Is it possible to solve the problem by dropping one of the modules?",
         "subcats": [{
             "name": "Yes",
             "link": "can_drop_or_swap",
             "goto_adviser": true
         }, {
             "name": "No",
-            "link": "unavoidable_course_clash"
+            "link": "unavoidable_module_clash"
         }]
     },
-    "unavoidable_course_clash": {
-        "filename": "unavoidable_course_clash",
-        "title": "Unavoidable Course Clash",
-        "info": "If two courses you want to take clash and no workaround exists, you will need to:<ul><li><a href=\"/pdf/Unaviodable_Course_Clash_Guide.pdf\">Consult this guide</a></li><li>Speak to your adviser</li><li>Discuss with the lectures of the courses in person</li></ul>",
-        "subcats": []
+    "unavoidable_module_clash": {
+        "filename": "unavoidable_module_clash",
+        "title": "Unavoidable module Clash",
+        "info": "If two modules you want to take clash and no workaround exists, you will need to:<ul><li><a href=\"/pdf/Unavoidable_Course_Clash_Guide.pdf\">Consult this guide</a></li><li>Speak to your adviser</li><li>Discuss with the lectures of the modules in person</li></ul>"
     },
     "enrol_guide": {
-        "filename": "enrol_guide",
         "title": "Guide on How to Enrol (MyCampus)",
         "info": "The registry has a useful <a href=\"https://www.gla.ac.uk/myglasgow/registry/enrolment/\">guide</a>  for students on enrolling.",
         "subcats": [{
@@ -150,29 +196,52 @@
         }]
     },
     "new_student": {
-        "filename": "new_student",
         "title": "Enrolment as a new student",
-        "info": "New students can go to  the College of Science and Engineering helpdesk (located on Boyd Orr Level 3) for help with enrolling.",
-        "subcats": []
+        "info": "New students can go to  the College of Science and Engineering HelpDesk (located on Boyd Orr Level 3) for help with enrolling."
     },
     "add_swap": {
-        "filename": "add_swap",
         "title": "Add/Swap",
-        "info": "Considering adding or swaping a course.<br> Before continuing consider the following<br><div id=\"accordion\"><div class=\"\"><div class=\"\"><a class=\"collapsed\" data-toggle=\"collapse\" href=\"#c1\">What course are you considering?</a></div><div id=\"c1\" class=\"collapse\" data-parent=\"#accordion\"><div class=\"\">You need to know what course you are considering and whether it is sutible for you.<br> If you don't know what course to pick look at the course catalogue to help make a decision.<br> When you know what course to pick email your adviser of studies to find out if it is a sutible choice.</div></div></div><div class=\"\"><div class=\"\"><a class=\"collapsed\" data-toggle=\"collapse\" href=\"#c2\">Are you adding or swapping?</a></div><div id=\"c2\" class=\"collapse\" data-parent=\"#accordion\"><div class=\"\">If you are adding a course it is usually much simpler so long as it doesn't conflict with another course.<br> If it doesn't conflict then you can most likly do it on MyCampus. If it does conflict then read \"Who will change your courses\"</div></div></div><div class=\"\"><div class=\"\"><a class=\"collapsed\" data-toggle=\"collapse\" href=\"#c3\">Are you in the Add/Drop period?</a></div><div id=\"c3\" class=\"collapse\" data-parent=\"#accordion\"><div class=\"\">The add/drop period exists to give students time to try out courses and still be able to change without falling too far behind, therefore changing courses outside the add/drop period could result in a lot of extra work for you - especially if you have missed assessment for the course you wish to change to.<br>Changing courses is still possible however you should certainly discuss it with your adviser to ensure that you make the best decision for you.</div></div></div><div class=\"\"><div class=\"\"><a class=\"collapsed\" data-toggle=\"collapse\" href=\"#c4\">Who will Change your courses You or the Collage Office?</a></div><div id=\"c4\" class=\"collapse\" data-parent=\"#accordion\"><div class=\"\">Though you can change courses yourself in almost all situations you should goto the SSO first.<br> The SSO can then tell you if they can solve the problem or if you need to go to the collage office.<br>However going to the SSO is only nessisary when you are going to drop a course (this includes droping a course to pick another course up and any time where you will drop a course), this is beacuse they can add a course before droping one which means you will never get stuck without a course.</div></div></div><div class=\"\"><div class=\"\"><a class=\"collapsed\" data-toggle=\"collapse\" href=\"#c5\">Getting advice on your proposed changes, are you confident?</a></div><div id=\"c5\" class=\"collapse\" data-parent=\"#accordion\"><div class=\"\">Any time you are considering changing courses it is always recommended you discuss this with your adviser as they really are best placed to anwser questions and help you decide what is right for you.</div></div></div></div>",
-        "subcats": []
+        "info": "Considering adding or swapping a module.<br> Before continuing consider the following<br>",
+        "accordion":[
+            {
+                "unique":"c1",
+                "heading":"What module are you considering?",
+                "body":"You need to know what module you are considering and whether it is suitable for you.<br> If you don't know what module to pick look at the course catalogue to help make a decision.<br> When you know what module to pick email your adviser of studies to find out if it is a suitable choice."
+            },
+            {
+                "unique":"c2",
+                "heading":"Are you adding or swapping?",
+                "body":"If you are adding a module it is usually much simpler so long as it doesn't conflict with another module.<br> If it doesn't conflict then you can most likely do it on MyCampus. If it does conflict then read \"Who will change your modules\""
+            },
+            {
+                "unique":"c3",
+                "heading":"Are you in the Add/Drop period?",
+                "body":"The add/drop period exists to give students time to try out modules and still be able to change without falling too far behind, therefore changing modules outside the add/drop period could result in a lot of extra work for you - especially if you have missed assessment for the module you wish to change to.<br>Changing modules is still possible however you should certainly discuss it with your adviser to ensure that you make the best decision for you."
+            },
+            {
+                "unique":"c4",
+                "heading":"Who will Change your module You or the College Office?",
+                "body":"Though you can change modules yourself in almost all situations you should goto the SSO first.<br> The SSO can then tell you if they can solve the problem or if you need to go to the college office.<br>However going to the SSO is only necessary when you are going to drop a module (this includes dropping a module to pick another module up and any time where you will drop a module), this is because they can add a module before dropping one which means you will never get stuck without a module."
+            },
+            {
+                "unique":"c5",
+                "heading":"Getting advice on your proposed changes, are you confident?",
+                "body":"Any time you are considering changing modules it is always recommended you discuss this with your adviser as they really are best placed to answer questions and help you decide what is right for you."
+            }
+        ]
     },
-    "course_choice": {
-        "filename": "course_choice",
-        "title": "Advice on choice of course and electives",
+    "module_choice": {
+        "filename": "module_choice",
+        "title": "Advice on choice of Modules and electives",
         "info": "",
         "subcats": [{
             "name": "1P vs 1CT",
             "link": "1p_or_1ct"
         }, {
-            "name": "Advice on Maths Courses",
+            "name": "Advice on Maths Modules",
             "link": "maths"
         }, {
-            "name": "What course should I pick",
+            "name": "What module should I pick",
             "link": "add_swap"
         }, {
             "name": "Enquires about number of credits",
@@ -180,7 +249,6 @@
         }]
     },
     "1p_or_1ct": {
-        "filename": "1p_or_1ct",
         "title": "1P or 1CT",
         "info": "Have a look at these advisory resources REMINDER: ACTUALLY GET RESOURCES AND LINK THEM HERE",
         "subcats": [{
@@ -193,71 +261,67 @@
     },
     "maths": {
         "filename": "maths",
-        "title": "Maths Courses",
+        "title": "Maths modules",
         "info": "Look at the <a href=\"https://www.gla.ac.uk/coursecatalogue/\">course catalogue</a> and this <a href=\"https://docs.google.com/document/d/1jp_B6i8Q01axzDfMM56u6DkQ_TT9ZPbBr-aW6zcVzUE/edit\">guide</a>.",
         "subcats": [{
-            "name": "Swapping with another course?",
+            "name": "Swapping with another module?",
             "link": "add_drop_period"
         }]
     },
     "credit_enquiries": {
-        "filename": "credit_enquiries",
         "title": "How Many Credits to Take",
-        "info": "Students should enroll in 120 credits (usually 60 per semester) worth of courses before the start of teaching time. If you have any further questions about taking credits, speak to a Student Support Officer."
+        "info": "Students should enroll in 120 credits (usually 60 per semester) worth of modules before the start of teaching time. If you have any further questions about taking credits, speak to a Student Support Officer."
     },
     "compsci_teaching_office": {
-        "filename": "compsci_teaching_office",
         "title": "Go to the Computing Science Teaching Office",
-        "info": "You can find the teaching office in F161, 17 Lilybank Gardens",
-        "subcats": []
+        "info": "You can find the teaching office in F161, 17 Lilybank Gardens"
     },
     "adviser_info": {
-        "filename": "adviser_info",
         "title": "Adviser of Studies",
-        "info": "To find out who your adviser of studies is, go to MyCampus->My Student Center. Their name should appear on the right of the screen. For their contact information try the Universiry staff A-Z.",
-        "subcats": []
+        "info": "To find out who your adviser of studies is, go to MyCampus->My Student Center. Their name should appear on the right of the screen. For their contact information try the University staff A-Z."
     },
     "transfer_outside_college": {
-        "filename": "transfer_outside_college",
         "title": "Transfer out of College of Science and Engineering",
         "info": "Go to your adviser of studies and discuss your options. You will also need to contact the college that you wish to transfer to and see if they will accept you.",
-        "subcats": [{
-            "name": "Who is my adviser of studies?",
-            "link": "adviser_info"
+        "accordion": [{
+            "unique": "c1",
+            "heading": "Who is my adviser of studies?",
+            "body": "To find out who your adviser of studies is, go to MyCampus->My Student Center. Their name should appear on the right of the screen. For their contact information try the University staff A-Z."
         }]
     },
     "health": {
-        "filename": "health",
         "title": "Health and Absence",
         "info": "",
         "subcats": [{
-            "name": "Disabillities and Exam Arangements",
-            "link": "health_disabled"
+            "name": "Disabilities and Exam Arrangements",
+            "link": "disability_arrangements"
         }, {
             "name": "Have you been absent or missed an assessment?",
-            "link": "health_good_cause"
+            "link": "good_cause"
         }, {
             "name": "Do you have prolonged a health problem or a personal issue that is affecting your ability to study?",
-            "link": "health_fit_to_study"
+            "link": "fitness_to_study"
         }, {
-            "name": "Local Health Sevices",
+            "name": "Local Health Services",
             "link": "local_health"
         }]
     },
-    "health_disabled": {
-        "filename": "health_disabled",
-        "title": "Disabillites",
-        "info": "See <a href=\"disabilitesunipage\">Disabilities Services page</a><br><ul><li><a href=\"mailto:disability@glasgow.ac.uk\">disability@glasgow.ac.uk</a></li><li>65 Southpark Avenue</li><li>Mon-Fri 0900-1700</li></ul>",
-        "subcats": []
+    "disability_arrangements": {
+        "title": "Disabilities",
+        "info": "See <a href=\"https://www.gla.ac.uk/myglasgow/disability/\">Disabilities Services page</a><br><ul><li><a href=\"mailto:disability@glasgow.ac.uk\">disability@glasgow.ac.uk</a></li><li>65 Southpark Avenue</li><li>Mon-Fri 0900-1700</li></ul>"
     },
-    "health_good_cause": {
-        "filename": "health_good_cause",
+    "good_cause": {
         "title": "Good Cause",
         "info": "Try and follow through <a href=\"/pdf/good_cause_flowchart.pdf\">this flowchart</a> to find the appropriate course of action. If you're still unsure you should speak to a Student Support Officer.",
-        "subcats": []
+        "accordion":[
+            {
+                "unique":"c1",
+                "heading":"Are you considering submitting a good cause for an exam?",
+                "body":"Be aware that if a good cause is accepted for an exam you will have to resit it even if your exam results are good. This is possibly something you may want to discuss with the SSO."
+            }
+        ]
     },
-    "health_fit_to_study": {
-        "filename": "health_fit_to_study",
+    "fitness_to_study": {
         "title": "Fitness to Study",
         "type": "category",
         "info": "Sometimes, there are health or other personal issues in a student's life that prevent them from normal study on a course.  Hence they are losing time for proper preparation for subsequent assessments.  The University aims to support students in such situations, and this is formally known as \"Fitness to Study\" - although issues are not due to health alone.  Fitness to Study is usually first considered locally in the School.",
@@ -271,13 +335,10 @@
         }]
     },
     "local_health": {
-        "filename": "local_health",
         "title": "Local Health Services",
-        "info": "Here's some info on the <a href=\"/pdf/Local_Health_Services.pdf\">local health services</a>",
-        "subcats": []
+        "info": "Here's some info on the <a href=\"/pdf/Local_Health_Services.pdf\">local health services</a>"
     },
     "finance": {
-        "filename": "finance",
         "title": "Finance",
         "info": "",
         "subcats": [{
@@ -285,52 +346,42 @@
             "link": "financial_aid_team"
         }, {
             "name": "Disability Support and Funding",
-            "link": "finance_disabled"
+            "link": "disability_funding"
         }, {
             "name": "Extra Resources",
             "link": "finance_extra"
         }]
     },
     "financial_aid_team": {
-        "filename": "financial_aid_team",
         "title": "Scholarships and funding",
-        "info": "See financial aid <a href=\"https://www.gla.ac.uk/myglasgow/registry/finance/funds/\">registry page</a> or contact the Financial Aid Team<ul><li><a href=\"mailto:reg.finaid@glasgow.ac.uk\">reg.finaid@glasgow.ac.uk</a></li><li>Level 2, Fraser Building</li><li>Mon-Fri: 1000-1600</li></ul>",
-        "subcats": []
+        "info": "See financial aid <a href=\"https://www.gla.ac.uk/myglasgow/registry/finance/funds/\">registry page</a> or contact the Financial Aid Team<ul><li><a href=\"mailto:reg.finaid@glasgow.ac.uk\">reg.finaid@glasgow.ac.uk</a></li><li>Level 2, Fraser Building</li><li>Mon-Fri: 1000-1600</li></ul>"
     },
-    "finance_disabled": {
-        "filename": "finance_disabled",
+    "disability_funding": {
         "title": "Disability Support and Funding",
-        "info": "Goto Disability Services page on <a href=\"https://www.gla.ac.uk/myglasgow/disability/financialassistance/\">finacial aid</a>",
-        "subcats": []
+        "info": "Goto Disability Services page on <a href=\"https://www.gla.ac.uk/myglasgow/disability/financialassistance/\">financial aid</a>"
     },
     "finance_extra": {
-        "filename": "finance_extra",
         "title": "Extra Resources",
-        "info": "Have a look at these other resources for financial help:<ul><li><a href=\"https://www.glasgowstudent.net/advice/money/\">SRC Money Page</a></li><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/budgeting-for-college-or-university#how-to-budget-at-uni\">Money Advice Service</a></li></ul>",
-        "subcats": []
+        "info": "Have a look at these other resources for financial help:<ul><li><a href=\"https://www.glasgowstudent.net/advice/money/\">SRC Money Page</a></li><li><a href=\"https://www.moneyadviceservice.org.uk/en/articles/budgeting-for-college-or-university#how-to-budget-at-uni\">Money Advice Service</a></li></ul>"
     },
     "careers": {
-        "filename": "careers",
         "title": "Careers and Internships",
-        "info": "See the <a href=\"https://www.gla.ac.uk/myglasgow/careers/\">Careers Hub page</a> or contact the Careers Team<ul><li><a href=\"mailto:careers@glasgow.ac.uk\">careers@glasgow.ac.uk</a></li><li>Level 2, Fraser Building</li><li>Mon-Fri: 1000-1600</li></ul>",
-        "subcats": []
+        "info": "See the <a href=\"https://www.gla.ac.uk/myglasgow/careers/\">Careers Hub page</a> or contact the Careers Team<ul><li><a href=\"mailto:careers@glasgow.ac.uk\">careers@glasgow.ac.uk</a></li><li>Level 2, Fraser Building</li><li>Mon-Fri: 1000-1600</li></ul>"
     },
     "study_abroad": {
-        "filename": "study_abroad",
         "title": "Erasmus/Study Abroad",
-        "info": "Have a look at the <a href=\"https://moodle.gla.ac.uk/course/view.php?id=3322\">Computing Science Moodle on Study Abroad</a> and the <a href=\"https://www.gla.ac.uk/myglasgow/students/goabroad/\">University page on studying abroad</a>.",
-        "subcats": []
+        "info": "Have a look at the <a href=\"https://moodle.gla.ac.uk/course/view.php?id=3322\">Computing Science Moodle on Study Abroad</a> and the <a href=\"https://www.gla.ac.uk/myglasgow/students/goabroad/\">University page on studying abroad</a>."
     },
     "exams": {
-        "filename": "exams",
         "title": "Exams, Assessment, Resits and Progression",
         "info": "",
         "subcats": [{
-            "name": "Disability Arangements",
+            "name": "Disability Arrangements",
             "link": "exam_disability_access"
         }, {
-            "name": "Results Info",
-            "link": "exam_registry_info"
+            "name": "General Information on Exams and Results",
+            "link": "https://www.gla.ac.uk/myglasgow/registry/exams/",
+            "linkexternal": true
         }, {
             "name": "Resits",
             "link": "resits"
@@ -344,19 +395,10 @@
         }]
     },
     "exam_disability_access": {
-        "filename": "exam_disability_access",
-        "title": "Exam Disability Arangements",
-        "info": "See disabilities services page or contact them at:<ul><li><a href=\"mailto:disability@glasgow.ac.uk\">disability@glasgow.ac.uk</a></li><li>65 Southpark Avenue</li><li>Open Monday-Friday: 09:00-17:00</li></ul>",
-        "subcats": []
-    },
-    "exam_registry_info": {
-        "filename": "exam_registry_info",
-        "title": "Exams Info",
-        "info": "See <a href=\"https://www.gla.ac.uk/myglasgow/registry/exams/\">registry page</a> on exams.",
-        "subcats": []
+        "title": "Exam Disability Arrangements",
+        "info": "See disabilities services page or contact them at:<ul><li><a href=\"mailto:disability@glasgow.ac.uk\">disability@glasgow.ac.uk</a></li><li>65 Southpark Avenue</li><li>Open Monday-Friday: 09:00-17:00</li></ul>"
     },
     "resits": {
-        "filename": "resits",
         "title": "Resits",
         "info": "",
         "subcats": [{
@@ -371,7 +413,6 @@
         }]
     },
     "standing_misconduct_and_appeals": {
-        "filename": "standing_misconduct_and_appeals",
         "title": "Academic Standing",
         "info": "",
         "subcats": [{
@@ -387,16 +428,15 @@
         }]
     },
     "appeals": {
-        "filename": "appeals",
         "title": "Appeals",
         "info": "For information on appeals, see the <a href=\"https://www.gla.ac.uk/myglasgow/senateoffice/studentcodes/students/academicappeals/#/\">senate office page</a> on appeals. Consider consulting your adviser on whether or not filing an appeal is the most appropriate course of action.<br><br>Additionally you can email Jane MacAllistar at <a href=\"mailto:senate-appeals@glasgow.ac.uk\">senate-appeals@glasgow.ac.uk</a> for further information on appeals.",
-        "subcats": [{
-            "name": "Who is my adviser of studies?",
-            "link": "adviser_info"
+        "accordion": [{
+            "unique": "c1",
+            "heading": "Who is my adviser of studies?",
+            "body": "To find out who your adviser of studies is, go to MyCampus->My Student Center. Their name should appear on the right of the screen. For their contact information try the University staff A-Z."
         }]
     },
     "plagiarism": {
-        "filename": "plagiarism",
         "title": "Plagiarism",
         "info": "See the Undergraduate <a href=\"/pdf/compsci_class_guide.pdf\">Class Guide</a> sections on plagiarism.",
         "subcats": [{

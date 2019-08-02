@@ -146,3 +146,20 @@ nav {
 #button {
   margin: 0px;
 }
+
+.acordlink {
+  color: lightgray!important;
+  font-size: 18px;
+}
+
+.acordlink:not(.collapsed)::after{
+  content: "-";
+}
+
+.acordlink.collapsed::after{
+  content: "+";
+}
+
+#accordionBody {
+  margin: 3px;
+}

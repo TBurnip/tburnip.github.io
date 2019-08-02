@@ -15,7 +15,7 @@ class Page {
 
     static async getData(name, datafile, callback){
         console.log("Getting data for: " + name + " from: " + datafile);
-        $.get(datafile, function(data) { callback(data[name]); });
+        $.getJSON(datafile, function(data) { console.log(data);callback(data[name]); });
     }
     
     _setupSubcats() {

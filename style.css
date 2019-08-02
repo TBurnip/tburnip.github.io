@@ -163,3 +163,11 @@ nav {
 #accordionBody {
   margin: 3px;
 }
+
+.glossary:not(.collapsed)::after{
+  content: "-";
+}
+
+.glossary.collapsed::after{
+  content: "+";
+}

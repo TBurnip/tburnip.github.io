@@ -36,8 +36,8 @@
     },
     "problem_with_plan":{
         "who":"adviser",
-        "why": "Because problems with plan/course of study can become so complicated it is easier to go to your adviser to solve them.",
-        "what": "I am having a problem with my plan/course of study.[a little explanation about your problem]",
+        "why": "Because problems with Plan/Programme(course of study) can become so complicated it is easier to go to your adviser to solve them.",
+        "what": "I am having a problem with my Plan/Programme(course of study).[a little explanation about your problem]",
         "notesforadviser":"",
         "subcats": [{
             "name": "Who is my adviser of studies?",

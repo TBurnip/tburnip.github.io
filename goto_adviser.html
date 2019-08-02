@@ -37,6 +37,20 @@
             </div>
         </div>
 
+        <div id="accordion">
+            {{ #accordion }}
+            <div class="">
+              <div class="">
+                <a class="collapsed acordlink" data-toggle="collapse" href="#{{ unique }}">{{ heading }} </a>
+              </div>
+              <div id="{{ unique }}" class="collapse" data-parent="#accordion">
+                <div class="" id="accordionBody">{{{ body }}}</div>
+              </div>
+            </div>
+            {{ /accordion }}
+          </div>
+        </div>
+
     </div>
     <img id="logo" src="img/logo.svg" alt="logo" width="190">
 </div>

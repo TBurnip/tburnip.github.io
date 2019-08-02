@@ -37,8 +37,8 @@
     ]
     },
     "issues_with_course_of_study": {
-        "title": "Issues with my study/course",
-        "info": "Since this is such a board category bellow are some options to help narrow down who you should go to.",
+        "title": "Issues with my studies or course",
+        "info": "Since this is such a broad category below are some options to help narrow down who you should go to.",
         "subcats": [{
             "name": "Is you issue relating to an individual course?",
             "link": "individual_course_issues"
@@ -46,7 +46,7 @@
             "name": "Is your issue relating to your ability to study?",
             "link": "study_issues"
         },{
-            "name":"Is the issue with your Plan/Programme(course of study)?",
+            "name":"Is the issue with your Plan/Programme (course of study)?",
             "link":"problem_with_plan",
             "goto_adviser":true
         }]
@@ -254,10 +254,6 @@
         "title": "Go to the Computing Science Teaching Office",
         "info": "You can find the teaching office in F161, 17 Lilybank Gardens"
     },
-    "adviser_info": {
-        "title": "Adviser of Studies",
-        "info": "To find out who your adviser of studies is, go to MyCampus->My Student Center. Their name should appear on the right of the screen. For their contact information try the University staff A-Z."
-    },
     "transfer_outside_college": {
         "title": "Transfer out of College of Science and Engineering",
         "info": "Go to your adviser of studies and discuss your options. You will also need to contact the college that you wish to transfer to and see if they will accept you.",
@@ -308,7 +304,8 @@
             "goto_adviser": true
         }, {
             "name": "Senate Office Guidance on Fitness to Study",
-            "link": "/pdf/fitness_to_study.pdf"
+            "link": "/pdf/fitness_to_study.pdf",
+            "linkexternal":true
         }]
     },
     "local_health": {

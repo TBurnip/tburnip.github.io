@@ -1,3 +1,11 @@
+:root {
+  --subcat-bg-color:#5B4D94;
+  --subcat-bg-color-hover:#951272;
+  --subcat-color:white;
+  --subcat-color-hover:white;
+}
+
+
 body {
   background-color: transparent !important;
 }
@@ -54,14 +62,14 @@ nav.navbar-expand-sm {
   text-align: center;
   width: 33.3%;
   margin: 5px;
-  color: black !important;
-  background-color: #B06C96 !important;
+  color: var(--subcat-color)!important;
+  background-color: var(--subcat-bg-color) !important;
   border-radius: 3px;
 }
 
 .subcat:hover {
-  color: white !important;
-  background-color: #951272 !important;
+  color: var(--subcat-color-hover) !important;
+  background-color: var(--subcat-bg-color-hover) !important;
 }
 
 .d-flex flex-wrap {

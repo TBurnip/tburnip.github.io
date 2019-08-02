@@ -97,7 +97,16 @@ nav.navbar-expand-sm {
 @media only screen and (max-width: 600px) {
   .subcat {
     float: left;
-    width: 75%;
+    width: 100%;
+  }
+  .row {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .col-sm-10 {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .d-flex flex-wrap {
@@ -165,6 +174,7 @@ a.nav-link:hover {
 
 ul#breadcrumb>li>a {
   font-size: 14pt;
+  font-weight: bold;
 }
 
 nav {

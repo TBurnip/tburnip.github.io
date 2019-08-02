@@ -85,7 +85,7 @@
         ]
     },
     "courses": {
-        "title": "courses, Timetabling & Enrolment",
+        "title": "Courses, Timetabling & Enrolment",
         "subcats": [{
             "name": "Timetable",
             "link": "timetable"
@@ -106,21 +106,18 @@
     "individual_courses_and_projects": {
         "title": "Questions relating to individual courses or project",
         "info": "Are you already enrolled in the course?",
-        "subcats": [{
-            "name": "Yes",
-            "link": "individual_courses_and_projects_enrolled"
-        }, {
-            "name": "No",
-            "link": "individual_courses_and_projects_not_enrolled"
-        }]
-    },
-    "individual_courses_and_projects_enrolled": {
-        "title": "Questions relating to individual courses or project and enrolled",
-        "info": "Check the moodle for the course and if that still doesn't answer your question, email the course lecturer"
-    },
-    "individual_courses_and_projects_not_enrolled": {
-        "title": "Questions relating to individual courses or project and not enrolled",
-        "info": "Check the course catalogue for information on the course. If this still doesn't yield the info you want email you adviser for advice."
+        "accordion":[
+            {
+                "unique":"c1",
+                "heading":"I am already enrolled in the course",
+                "body": "Check the moodle for the course and if that still doesn't answer your question, email the course lecturer"
+            },
+            {
+                "unique":"c2",
+                "heading":"I am not currently enrolled in the course",
+                "body": "Check the <a href=\"https://www.gla.ac.uk/coursecatalogue/\">course catalogue</a> for information on the course. If this still doesn't yield the info you want email you adviser for advice."
+            }
+        ]
     },
     "timetable": {
         "title": "Timetable",
@@ -172,8 +169,8 @@
         }]
     },
     "unavoidable_course_clash": {
-        "title": "Unavoidable course Clash",
-        "info": "If two courses you want to take clash and no workaround exists, you will need to:<ul><li><a href=\"/pdf/Unavoidable_Course_Clash_Guide.pdf\">Consult this guide</a></li><li>Speak to your adviser</li><li>Discuss with the lectures of the courses in person</li></ul>"
+        "title": "Unavoidable Course Clash",
+        "info": "If two courses you want to take clash and no workaround exists, you will need to:<ul><li><a href=\"/pdf/Unavoidable_Course_Clash_Guide.pdf\">Consult this guide</a></li><li>Speak to your adviser</li><li>Discuss with the lecturers of the courses in person</li></ul>"
     },
     "enrol_guide": {
         "title": "Guide on How to Enrol (MyCampus)",
@@ -194,7 +191,7 @@
             {
                 "unique":"c1",
                 "heading":"What course are you considering?",
-                "body":"You need to know what course you are considering and whether it is suitable for you.<br> If you don't know what course to pick look at the course catalogue to help make a decision.<br> When you know what course to pick email your adviser of studies to find out if it is a suitable choice."
+                "body":"You need to know what course you are considering and whether it is suitable for you.<br> If you don't know what course to pick look at the <a href=\"https://www.gla.ac.uk/coursecatalogue/\">course catalogue</a> to help make a decision.<br> When you know what course to pick email your adviser of studies to find out if it is a suitable choice."
             },
             {
                 "unique":"c2",
@@ -204,12 +201,12 @@
             {
                 "unique":"c3",
                 "heading":"Are you in the Add/Drop period?",
-                "body":"The add/drop period exists to give students time to try out courses and still be able to change without falling too far behind, therefore changing courses outside the add/drop period could result in a lot of extra work for you - especially if you have missed assessment for the course you wish to change to.<br>Changing courses is still possible however you should certainly discuss it with your adviser to ensure that you make the best decision for you."
+                "body":"The add/drop period exists to give students time to try out courses and still be able to change without falling too far behind, therefore changing courses outside the add/drop period could result in a lot of extra work for you - especially if you have missed assessment for the course you wish to change to.<br>Changing courses is still possible however you should certainly discuss it with your adviser to ensure that you make the best decision for you.<br><br>Dates for the Add/Drop period can be found <a href=\"https://www.gla.ac.uk/myglasgow/registry/exams/dates/\">here.</a>"
             },
             {
                 "unique":"c4",
-                "heading":"Who will Change your module? You or the College Office?",
-                "body":"Though you can change modules yourself in almost all situations you should goto the SSO first.<br> The SSO can then tell you if they can solve the problem or if you need to go to the college office.<br>However going to the SSO is only necessary when you are going to drop a module (this includes dropping a module to pick another module up and any time where you will drop a module), this is because they can add a module before dropping one which means you will never get stuck without a module."
+                "heading":"Who will Change your course? You or the College Office?",
+                "body":"Though you can change courses yourself in almost all situations you should goto the Student Support Officer first.<br> The Student Support Officer can then tell you if they can solve the problem or if you need to go to the college office.<br>However going to the Student Support Officer is only necessary when you are going to drop a course (this includes dropping a course to pick another course up and any time where you will drop a course), this is because they can add a course before dropping one which means you will never get stuck without a course."
             },
             {
                 "unique":"c5",
@@ -267,7 +264,7 @@
         "title": "Health and Absence",
         "subcats": [{
             "name": "Disabilities and Exam Arrangements",
-            "link": "disability_arrangements"
+            "link": "exam_disability_access"
         }, {
             "name": "Have you been absent or missed an assessment?",
             "link": "good_cause"
@@ -279,18 +276,14 @@
             "link": "local_health"
         }]
     },
-    "disability_arrangements": {
-        "title": "Disabilities",
-        "info": "See <a href=\"https://www.gla.ac.uk/myglasgow/disability/\">Disabilities Services page</a><br><ul><li><a href=\"mailto:disability@glasgow.ac.uk\">disability@glasgow.ac.uk</a></li><li>65 Southpark Avenue</li><li>Mon-Fri 0900-1700</li></ul>"
-    },
     "good_cause": {
         "title": "Good Cause",
         "info": "Try and follow through <a href=\"/pdf/good_cause_flowchart.pdf\">this flowchart</a> to find the appropriate course of action. If you're still unsure you should speak to a Student Support Officer.",
         "accordion":[
             {
                 "unique":"c1",
-                "heading":"Are you considering submitting a good cause for an exam?",
-                "body":"Be aware that if a good cause is accepted for an exam you will have to resit it even if your exam results are good. This is possibly something you may want to discuss with the SSO."
+                "heading":"I am wanting to submit a good cause for an exam",
+                "body":"Be aware that if a good cause is accepted for an exam you will have to resit it even if your exam results are good. This is possibly something you may want to discuss with the Student Support Officer."
             }
         ]
     },
@@ -310,7 +303,7 @@
     },
     "local_health": {
         "title": "Local Health Services",
-        "info": "Here's some info on the <a href=\"/pdf/Local_Health_Services.pdf\">local health services</a>"
+        "info": "Here's some information on the <a href=\"/pdf/Local_Health_Services.pdf\">local health services</a>"
     },
     "finance": {
         "title": "Finance",
@@ -331,7 +324,7 @@
     },
     "disability_funding": {
         "title": "Disability Support and Funding",
-        "info": "Goto Disability Services page on <a href=\"https://www.gla.ac.uk/myglasgow/disability/financialassistance/\">financial aid</a>"
+        "info": "Go to <a href=\"https://www.gla.ac.uk/myglasgow/disability/financialassistance/\">Disability Services page</a> on financial aid."
     },
     "finance_extra": {
         "title": "Extra Resources",
@@ -368,7 +361,7 @@
     },
     "exam_disability_access": {
         "title": "Exam Disability Arrangements",
-        "info": "See disabilities services page or contact them at:<ul><li><a href=\"mailto:disability@glasgow.ac.uk\">disability@glasgow.ac.uk</a></li><li>65 Southpark Avenue</li><li>Open Monday-Friday: 09:00-17:00</li></ul>"
+        "info": "See <a href=\"https://www.gla.ac.uk/myglasgow/disability/\">Disability Services page</a> or contact them at:<ul><li><a href=\"mailto:disability@glasgow.ac.uk\">disability@glasgow.ac.uk</a></li><li>65 Southpark Avenue</li><li>Open Monday-Friday: 09:00-17:00</li></ul>"
     },
     "resits": {
         "title": "Resits",
@@ -379,9 +372,13 @@
             "name": "International",
             "link": "exam_registry_info"
         }, {
-            "name": "MV (Good cause) Resits",
+            "name": "MV (Good cause) Resit Arrangements",
             "link": "compsci_teaching_office"
         }]
+    },
+    "exam_registry_info": {
+        "title": "See the Exam Registry Page",
+        "info": "Goto <a href=\"https://www.gla.ac.uk/myglasgow/registry/exams/resultsandresits/\">Registry Page</a>"
     },
     "standing_misconduct_and_appeals": {
         "title": "Academic Standing",
@@ -413,48 +410,5 @@
             "name": "Plagiarism appeals",
             "link": "appeals"
         }]
-    },
-    "demo_page": {
-        "title": "this is the title",
-        "info": "This is the info section. It supports <b>HTML</b>",
-        "accordion":[
-            {
-                "unique":"this_must_be_unique_and_cant_contain_spaces",
-                "heading":"this is the heading for this accordion card",
-                "body":"this is the body for this accordion card <b>also supports HTML</b>"
-            },
-            {
-                "unique":"otherwise_this_happens",
-                "heading":"non unique unique variable",
-                "body":"this is the body for this accordion card <b>also supports HTML</b>"
-            },
-            {
-                "unique":"otherwise_this_happens",
-                "heading":"non unique unique variable",
-                "body":"this is the body for this accordion card <b>also supports HTML</b>"
-            }
-        ],
-        "subcats":[
-            {
-                "name":"this is the text of the subcat",
-                "link":"this is the link. this is the filename for the page you want to visit e.g. this page has the filename demo_page. when goto_adviser or linkexternal are false they can be omitted",
-                "goto_adviser":false,
-                "linkexternal":false
-            },
-            {
-                "name":"Internal example (goes to fitness to study ordinary page)",
-                "link":"fitness_to_study"
-            },
-            {
-                "name":"Goto Adviser example (goes to fitness to study goto_adviser page)",
-                "link":"consider_for_fit_to_study",
-                "goto_adviser":true
-            },
-            {
-                "name":"External example (goes to uni homepage)",
-                "link": "https://www.gla.ac.uk/",
-                "linkexternal": true
-            }
-        ]
     }
 }

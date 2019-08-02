@@ -98,7 +98,11 @@ nav.navbar-expand-sm {
   }
 
   #logo {
-    width: 40px;
+    width: 80px;
+  }
+
+  .nav-item {
+    padding-left: 5px;
   }
 }
 
@@ -125,6 +129,7 @@ body {
 #glossary {
   color: aliceblue;
   background-color: #005398 !important;
+  padding-bottom: 10px;
 }
 
 #useful {

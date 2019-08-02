@@ -1,15 +1,15 @@
 body {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
 
 #motm {
   text-align: center;
-  font-size: 40%!important;
+  font-size: 40% !important;
   margin-bottom: 10px;
 }
 
 #what {
-  background-color: transparent!important;
+  background-color: transparent !important;
   border-radius: 0px;
   border: 0px;
   -webkit-appearance: none;
@@ -23,7 +23,7 @@ body {
 }
 
 #what:focus {
-  outline: none!important;
+  outline: none !important;
 }
 
 #info {
@@ -31,13 +31,19 @@ body {
 }
 
 .jumbotron {
-  background-color:	#013564;
+  background-color: #013564;
   color: aliceblue;
   position: relative;
   top: 0px;
   border-radius: 0px;
   margin: 0px;
 }
+
+.navbar-nav {
+  background-color: #005398 !important;
+}
+
+
 
 nav.navbar-expand-sm {
   margin-bottom: 50px;
@@ -47,10 +53,15 @@ nav.navbar-expand-sm {
   float: left;
   text-align: center;
   width: 33.3%;
-  margin:5px;
-  color:#343a40!important;
-  background-color: #cfe2f3ff!important;
-  box-shadow: 10px, 10px;
+  margin: 5px;
+  color: black !important;
+  background-color: #B06C96 !important;
+  border-radius: 3px;
+}
+
+.subcat:hover {
+  color: white !important;
+  background-color: #951272 !important;
 }
 
 .d-flex flex-wrap {
@@ -67,7 +78,7 @@ nav.navbar-expand-sm {
   top: 10px;
 }
 
- .breadcrumb {
+.breadcrumb {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -103,15 +114,17 @@ html {
 }
 
 body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  /* Margin bottom by footer height */
 }
 
 .row {
-  max-width: 100vw!important;
+  max-width: 100vw !important;
 }
 
 #glossary {
   color: aliceblue;
+  background-color: #005398 !important;
 }
 
 #useful {
@@ -119,16 +132,22 @@ body {
   background-color: var(--gray-dark);
 }
 
-#useful > h5 > ul {
+#useful>h5>ul {
   list-style-type: none;
   text-indent: -20px;
 }
-#useful > h5 > ul > li::before {
+
+#useful>h5>ul>li::before {
   content: "\2192 \0020";
 }
 
 a.nav-link {
   font-size: 18pt;
+  color: rgba(255, 255, 255, .7) !important;
+}
+
+a.nav-link:hover {
+  color: rgba(255, 255, 255, 1) !important;
 }
 
 ul#breadcrumb>li>a {
@@ -136,7 +155,7 @@ ul#breadcrumb>li>a {
 }
 
 nav {
-  margin-bottom: 0px!important;
+  margin-bottom: 10px !important;
 }
 
 #bodyeything {
@@ -148,15 +167,15 @@ nav {
 }
 
 .acordlink {
-  color: lightgray!important;
+  color: lightgray !important;
   font-size: 18px;
 }
 
-.acordlink:not(.collapsed)::after{
+.acordlink:not(.collapsed)::before {
   content: "-";
 }
 
-.acordlink.collapsed::after{
+.acordlink.collapsed::before {
   content: "+";
 }
 
@@ -164,10 +183,34 @@ nav {
   margin: 3px;
 }
 
-.glossary:not(.collapsed)::after{
+.glossary:not(.collapsed)::before {
   content: "-";
 }
 
-.glossary.collapsed::after{
+.glossary.collapsed::before {
   content: "+";
+}
+
+#accordion2 {
+  margin-left: 40px;
+}
+
+#accordionBody {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+#glossary-link {
+  color: #FFB948 !important
+}
+
+.btn-outline-success {
+  color: #FFB948 !important;
+  border-color: #FFB948 !important;
+}
+
+.btn-outline-success:hover {
+  color: black!important;
+  background-color: #FFB948 !important;
 }

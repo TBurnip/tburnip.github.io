@@ -31,7 +31,7 @@
       <a class="nav-link" onclick="Nav.goBack()">Back</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-success glossary collapsed" href="#glossary" data-toggle="collapse">Glossary</u></a>
+      <a id="glossary-link" class="nav-link text-success glossary collapsed" href="#glossary" data-toggle="collapse">Glossary</u></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/pdf/Complete Tree v1.1.pdf">Graph Version</a>
@@ -40,7 +40,6 @@
 
   <div id="glossary" class="collapse">
     <div class="row">
-      <div class="col-sm-2"></div>
       <div class="col-sm-8">
 
         <div id="accordion2">
@@ -138,7 +137,6 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-2"> </div>
     </div>
   </div>
 </nav>
@@ -149,7 +147,7 @@
   <div class="col-sm-10">
     <div class="d-flex flex-wrap">
       {{ #subcats }}
-      <a class="subcat flex-fill shadow-sm  p-4 mb-2 bg-white text-dark {{{ type }}}" href="{{ link }}">
+      <a class="subcat flex-fill p-4 mb-2 {{{ type }}}" href="{{ link }}">
         <h2>{{ name }}</h2>
       </a>
       {{ /subcats }}

@@ -26,30 +26,142 @@
   </head>
 
   <body>
-      <nav class="navbar lg navbar-expand-sm bg-dark navbar-dark">
-
+      <div class="jumbotron">
+          <div class="col-sm-10">
+            <h1 class="display-3">404 Page not found</h1>
+            <p id="info">Click back or home</p>
+          </div>
+          <a href="http://gla.ac.uk"><img id="logo" src="img/logo.svg" alt="logo" width="190"></a>
+        </div>
+        
+        <nav class="navbar-expand-sm bg-dark navbar-dark">
+          <!-- class="navbar navbar-expand-sm bg-light navbar-light">-->
           <!-- Links -->
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="goback()">Back</a>
+              <a class="nav-link" onclick="Nav.goBack()">Back</a>
+            </li>
+            <li class="nav-item">
+              <a id="glossary-link" class="nav-link text-success glossary collapsed" href="#glossary" data-toggle="collapse">Glossary</u></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pdf/Complete Tree v1.1.pdf">Graph Version</a>
             </li>
           </ul>
-        </nav>
-        <ul class="breadcrumb" id="breadcrumb">
-        </ul>
         
-        <div class="row">
-          <div class="col-sm-1"></div>
-          <div class="col-sm-10">
-            <h1 class="display-3">404 Page not Found</h1>
-            <div id="info">This page cannot be found sorry for the inconvience.</div>
+          <div id="glossary" class="collapse">
+            <div class="row">
+              <div class="col-sm-8">
+        
+                <div id="accordion2">
+                  <div class="">
+                    <div class="">
+                      <a class="collapsed acordlink" data-toggle="collapse" href="#c1">Course </a>
+                    </div>
+                    <div id="c1" class="collapse" data-parent="#accordion">
+                      <div class="" id="accordionBody">In Glasgow terminology, course has a strict meaning as a unit of
+                        learning, made up of lectures, tutorial, exercises and an exam, and for which you will receive a grade
+                        eventually that appears on your transcript (the record of all the courses you have taken while at the
+                        University). [Transcript could be a glossary term.] It is typically given by one, or a small number of,
+                        lecturers. In any one year, you register for a number of courses.</div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="">
+                      <a class="collapsed acordlink" data-toggle="collapse" href="#c2">Course of Study </a>
+                    </div>
+                    <div id="c2" class="collapse" data-parent="#accordion">
+                      <div class="" id="accordionBody">This is an informal term that students and staff may use to mean the
+                        Programme/Plan on which a student is registered - see elsewhere in the Glossary for precise definitions
+                        of Programme/Plan.</div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="">
+                      <a class="collapsed acordlink" data-toggle="collapse" href="#c3">Module </a>
+                    </div>
+                    <div id="c3" class="collapse" data-parent="#accordion">
+                      <div class="" id="accordionBody">This is not a word formally used in Glasgow terminology - but it has the
+                        same meaning as course.</div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="">
+                      <a class="collapsed acordlink" data-toggle="collapse" href="#c6">Programme and Plan </a>
+                    </div>
+                    <div id="c6" class="collapse" data-parent="#accordion">
+                      <div class="" id="accordionBody">These two words are closely linked and easy to confuse. Because you are
+                        reading this Glossary, you are probably registered for a Computing Science degree - for example BSc
+                        (Hons) Software Engineering. Breaking this down, the Programme you are on is BSc (Hons) - this is a type
+                        of degree - others in the University are MSci, MA, MEng, PhD and so on; the Plan that you are on is
+                        Software Engineering. So the plan is akin to the topic or subject area of your degree, and the programme
+                        relates to the level at which you are studying that topic. (Folk often informally use "Course of Study"
+                        to mean a combination of their Programme and Plan.)</div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="">
+                      <a class="collapsed acordlink" data-toggle="collapse" href="#c7">Subject </a>
+                    </div>
+                    <div id="c7" class="collapse" data-parent="#accordion">
+                      <div class="" id="accordionBody">Subject can be found to be loosely analogous to a school. E.g. The Maths
+                        subject is taught by the School of Mathematics & Statistics and Physics is taught by the School of
+                        Physics & Astronomy</div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="">
+                      <a class="collapsed acordlink" data-toggle="collapse" href="#c8">Credits </a>
+                    </div>
+                    <div id="c8" class="collapse" data-parent="#accordion">
+                      <div class="" id="accordionBody">Every course has a credit value associated with it, usually in steps of
+                        10 credits - e.g. 10 credits, 20 credits and so on - and this value relates to the amount of learning
+                        that is expected on that course. Each single credit represents 10 learning hours, so if you are studying
+                        for a 10 credit course, you should expect to spend around 100 hours on the course - made up of lectures,
+                        labs, tutorials and your own study time. The formal contact time of lectures, labs and tutorials will
+                        usually only be 20-40% of this total time. You typically must take 120 credits of courses each year.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="">
+                      <a class="collapsed acordlink" data-toggle="collapse" href="#c9">Grade </a>
+                    </div>
+                    <div id="c9" class="collapse" data-parent="#accordion">
+                      <div class="" id="accordionBody">For every course, you will be awarded a grade on completion. This is an
+                        amalgam/average of all the exercises/assessments you completed on the course. A grade consists of a
+                        letter - A to H - and then within each grade there are bands - e.g. A1, D3 and so on. Formally, there
+                        are 22 points on the scale of grades: A1-5, B1-3, C1-3, D1-3, E1-3, F1-3, G1-2, and then finally H is a
+                        zero award.</div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="">
+                      <a class="collapsed acordlink" data-toggle="collapse" href="#c10">GPA - Grade Point Average </a>
+                    </div>
+                    <div id="c10" class="collapse" data-parent="#accordion">
+                      <div class="" id="accordionBody">This is a weighted average of a collection of your grades - for example,
+                        all the grades this year, all the grades in one subject area, or all the grades so far in your degree.
+                        Hence, in the GPA calculation, a 20-credit course will count more significantly than a 10-credit course
+                        towards your overall GPA.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-1"></div>
-        </div>
-
+        </nav>
+        
+        <footer class="footer">
+          <span class="text-muted">
+            <b>
+              <ul class="breadcrumb" id="breadcrumb" style="margin-bottom: 0px!important;"></ul>
+            </b>
+          </span>
+        </footer>
     <script>
     main()
     </script>
